@@ -1,0 +1,175 @@
+/* Navbar */
+
+.navbar-style{
+    height: 60px;
+}
+
+.icon-container{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(158, 158, 158, 0.1);
+}
+.dropdown-icon-color{
+    color: #6045E2;
+}
+.dropdown-text-color{
+    color: #9E9E9E;
+}
+.dropdown-text-color:hover, .dropdown-text-color:focus{
+    color: #9E9E9E;
+}
+
+/* Sidebar*/
+
+.sidebar-bg{
+    background-color: #55539F;
+    min-height: 3vh;
+}
+
+.sidebar-icon-bg{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(228,	228, 232, 0.2);
+}
+
+.back-icon-style{
+    width: 36px;
+    height: 36px;
+    background-color: rgb(228,	228, 232, 0.2) ;
+}
+
+.sidebar-link:hover .sidebar-icon{
+    color:#1BC167;
+    text-shadow: 0px 0px 10px #3DF988;
+    transition: 0.3s;
+}
+
+.sidebar-link:focus .sidebar-icon{
+    color:#1BC167;
+    text-shadow: 0px 0px 10px #3DF988;
+}
+
+/* Content */
+
+.content-bg{
+    background-color: #F0F1F5;
+    min-height: calc(100vh - 60px);
+}
+
+.profil{
+    color: #52525D;
+}
+
+.img-desc{
+    color: rgb(82, 82,	93, 0.85);
+    font: normal normal normal 12px/16px Segoe UI;
+}
+
+.btn-style{
+    border: none;
+    font: normal normal normal 14px/19px Segoe UI;
+    color: #6045E2;
+}
+
+.btn-style:hover{
+    color: #6045E2;
+}
+
+.btn-style:hover .btn-icon{
+    opacity: 1!important;
+}
+
+.label-style{
+    color: #52525D;
+    font: normal normal 600 14px/19px Segoe UI;
+}
+
+.input-style{
+    border: 1px solid #CED4DA;
+}
+
+.input-style:hover{
+    cursor: pointer;
+}
+
+.input-style:focus{
+    box-shadow: 0px 3px 6px #D5CDF9;
+    border: 1px solid #6045E2;
+}
+
+.switch-label-style{
+    color: #52525D;
+    font: normal normal 600 14px/19px Segoe UI;
+}
+
+.switch-input-style:checked{
+    background-color: #1BC167;
+    border: none;
+}
+
+.switch-input-style{
+    width: 39px!important;
+    height: 24px;
+    background-color: #C9C9D5;
+    border: none;
+}
+
+.switch-input-style:hover{
+    cursor: pointer;
+}
+
+.change-pswd{
+    border: none;
+    font: normal normal normal 14px/19px Segoe UI;
+    color: #6045E2;
+}
+
+.change-pswd:hover{
+    color: #6045E2;
+}
+
+.lock-icon-style{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(85, 83, 159, 0.1);
+    color: rgb(96, 69, 226, 0.5);
+}
+
+.change-pswd:hover .lock-icon-style{
+    color: rgb(96, 69, 226, 1);
+}
+
+.btn-cancel{
+    border: none;
+    background-color: rgb(228,228,232, 0.7);
+    color: rgb(82,82,93,0.6);
+    font: normal normal 600 14px/24px Segoe UI;
+}
+
+.btn-cancel:hover{
+    background-color: rgb(228,228,232);
+    color: rgb(82,82,93,0.6);
+}
+
+.btn-update{
+    background: transparent linear-gradient(90deg, #6568F3 0%, var(--unnamed-color-6045e2) 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(90deg, #6568F3 0%, #6045E2 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    color: #FFFFFF;
+    font: normal normal normal 14px/24px Segoe UI;
+}
+
+.btn-update:hover{
+    background: transparent linear-gradient(90deg, var(--unnamed-color-6045e2) 0%, #6568F3 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(90deg, #6045E2 0%, #6568F3 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    color: #FFFFFF;
+}
+
+/* Footer*/
+
+.footer{
+    font: normal normal normal 12px/20px Segoe UI;
+    color: #9E9E9EBF;
+}
+

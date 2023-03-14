@@ -1,9 +1,8 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-html {
+body{
+    background-color: #55539F;
+}
+
+/* html {
     height: 100%;
 }
 body {
@@ -12,16 +11,17 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background: transparent linear-gradient(180deg, #6066B9 0%, #30335D 100%) 0% 0% no-repeat padding-box;
-}
+} */
 
-
-.container-fluid{
-    height: auto;
-}
+.vertical-center {
+    min-height: 100%;
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+} 
 
 .form-container{
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
@@ -29,14 +29,10 @@ body {
     width: 70%;
     height: auto;
     padding: 5%;
-    /* margin: 25% auto; */
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.4);
     box-shadow: 0px 0px 20px #52575D1A;
     border: 2px solid #FFFFFF33;
     border-radius: 10px;
-    /* opacity: 1;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px); */
 }
 
 .label-style{
@@ -54,10 +50,6 @@ body {
     cursor: pointer;
 }
 
-::placeholder{
-    color: #FFFFFF;
-}
-
 .form p{
     text-align: left;
     font: normal normal 600 16px/20px Segoe UI;
@@ -67,7 +59,6 @@ body {
 }
 
 .btn-style{
-    /* width: 100%; */
     background: transparent linear-gradient(180deg, #383B6C 0%, #1C1E36 100%) 0% 0% no-repeat padding-box;
     opacity: 1;
 }
@@ -92,11 +83,6 @@ body {
     opacity: 1;
 }
 
-.vertical-center {
-    min-height: 100%;
-    min-height: 100vh; 
-    display: flex;
-    align-items: center;
-  } 
+
 
   
