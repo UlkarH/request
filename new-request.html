@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New request</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/new-request.css">
+
+    <!-- Font-awesome -->
+    <script src="https://kit.fontawesome.com/474e853496.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand border-bottom shadow-sm navbar-style">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">
+                <img src="images/cic_logo.png" alt="logo" width="77" height="36">
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle dropdown-text-color" id="profil-dropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <div
+                            class="d-inline-flex align-items-center justify-content-center rounded icon-container me-1">
+                            <i class="fa-regular fa-user dropdown-icon-color"></i>
+                        </div>
+                        Sona Ahmadova
+                    </a>
+                    <ul class="dropdown-menu mt-2 ms-3" aria-labelledby="profil-dropdown">
+                        <li><a href="profil.html" class="dropdown-item dropdown-text-color"><i
+                                    class="fa-solid fa-user pe-3"></i>Profil</a></li>
+                        <li><a href="#change-password" class="dropdown-item dropdown-text-color"
+                                data-bs-toggle="modal"><i class="fa-solid fa-lock pe-3"></i>Şifrəni yenilə</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a href="login.html" class="dropdown-item dropdown-text-color"><i
+                                    class="fa-solid fa-right-from-bracket pe-3"></i>Çıxış</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Sidebar -->
+
+            <div class="col-lg-2 sidebar-bg">
+
+                <nav class="navbar navbar-expand-lg navbar-dark align-items-start w-100">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#sidebar-content" aria-controls="sidebar-content" aria-expanded="false">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="sidebar-content">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-item py-1">
+                                <a href="requests.html" class="nav-link sidebar-link">
+                                    <div
+                                        class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
+                                        <i class="fa-regular fa-file sidebar-icon"></i>
+                                    </div>
+                                    Sorğular
+                                </a>
+                            </li>
+                            <li class="nav-item py-1">
+                                <a href="#" class="nav-link sidebar-link">
+                                    <div
+                                        class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
+                                        <i class="fa-solid fa-chart-column sidebar-icon"></i>
+                                    </div>
+                                    Hesabat
+                                </a>
+                            </li>
+                            <li class="nav-item py-1">
+                                <a href="profil.html" class="nav-link sidebar-link">
+                                    <div
+                                        class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
+                                        <i class="fa-regular fa-user sidebar-icon"></i>
+                                    </div>
+                                    Profil
+                                </a>
+                            </li>
+                            <li class="nav-item pt-lg-5">
+                                <a href="#" class="nav-link position-relative start-50">
+                                    <div
+                                        class="d-inline-flex align-items-center justify-content-center rounded mx-auto back-icon-style">
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+
+            <!-- Content -->
+
+            <div class="col-lg-10 content-bg d-flex flex-column align-items-end">
+                <!-- Body -->
+                <div class="container-fluid mb-4 mb-md-0">
+
+                    <!-- Header -->
+                    <div class="row mt-5">
+                        <div class="col-12 d-flex justify-content-between">
+                            <h4 class="pt-2 new-request-header">Yeni sorğu yarat</h4>
+                            <a href="requests.html" class="btn shadow-none border-0 px-0 request-btn-back" role="button"><i
+                                    class="fa-solid fa-chevron-left pe-2 opacity-50 request-back-icon"></i>Geri</a>
+                        </div>
+                    </div>
+
+                    <!-- Form -->
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="category"
+                                            class="form-label request-form-label required">Kateqoriya</label>
+                                        <select class="form-select shadow-none request-form-elements" name=""
+                                            id="category" aria-label="select category">
+                                            <option value="" selected>3E - AGİS</option>
+                                            <option value="">3E dəstək</option>
+                                            <option value="">3rd Party</option>
+                                            <option value="">abc web site</option>
+                                            <option value="">AGİS - Debitor</option>
+                                            <option value="">AD SOCAR Romania</option>
+                                            <option value="">Agis - Proqram təminatı</option>
+                                            <option value="">ailem.socar.az</option>
+                                            <option value="">ant.socar.az</option>
+                                            <option value="">ASAN web service</option>
+                                            <option value="">azeriqaz104.az web site</option>
+                                            <option value="">Azeriqaz sms</option>
+                                            <option value="">azkob.az</option>
+                                            <option value="">Call Center</option>
+                                            <option value="">cic web site</option>
+                                            <option value="">cvs web site</option>
+                                            <option value="">AD SOCAR Romania</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="priority" class="form-label request-form-label">Prioritet</label>
+                                        <select class="form-select shadow-none request-form-elements" name=""
+                                            id="priority">
+                                            <option value="" selected>Low</option>
+                                            <option value="">Medium</option>
+                                            <option value="">High</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="request_type" class="request-form-label">Sorğunun
+                                            tipi</label>
+                                        <select class="form-select shadow-none request-form-elements" name=""
+                                            id="request_type">
+                                            <option value="">APP Change</option>
+                                            <option value="">APP Issue</option>
+                                            <option value="">APP New Requirement</option>
+                                            <option value="">Change the Report</option>
+                                            <option value="">Create Custom Report</option>
+                                            <option value="">Create New Report</option>
+                                            <option value="">Incident</option>
+                                            <option value="">Master Data Change</option>
+                                            <option value="">Service Request</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group mt-3">
+                                        <label for="subject"
+                                            class="form-label request-form-label required">Başlıq</label>
+                                        <input type="text" class="form-control shadow-none request-form-elements"
+                                            id="subject">
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="text" class="form-label request-form-label required">Mətn</label>
+                                        <textarea name=""
+                                            class="form-control shadow-none request-form-elements request-textarea"
+                                            id="text" rows="5"></textarea>
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="file-choose" class=" pb-2 request-form-label">Qoşma</label>
+                                        <br>
+                                        <input type="file" class="" id="file-choose">
+                                    </div>
+                                    <div class="submit mt-4">
+                                        <a href="requests.html" role="btn" class="btn px-4 py-2 request-form-btn" type="submit">Göndər</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="container-fluid mt-auto footer">
+                    <p>Copyright &copy; CIC LLC</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -11,12 +11,13 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     <!-- css -->
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/profil.css">
 
     <!-- Font-awesome -->
     <script src="https://kit.fontawesome.com/474e853496.js" crossorigin="anonymous"></script>
 
-    <title>Profil</title>
+    <title>Profile</title>
 </head>
 
 <body>
@@ -40,8 +41,8 @@
                     <ul class="dropdown-menu mt-2 ms-3" aria-labelledby="profil-dropdown">
                         <li><a href="#" class="dropdown-item dropdown-text-color"><i
                                     class="fa-solid fa-user pe-3"></i>Profil</a></li>
-                        <li><a href="password.html" class="dropdown-item dropdown-text-color"><i
-                                    class="fa-solid fa-lock pe-3"></i>Şifrəni yenilə</a></li>
+                        <li><a href="#change-password" class="dropdown-item dropdown-text-color"
+                                data-bs-toggle="modal"><i class="fa-solid fa-lock pe-3"></i>Şifrəni yenilə</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -61,111 +62,132 @@
             <div class="col-lg-2 sidebar-bg">
 
                 <nav class="navbar navbar-expand-lg navbar-dark align-items-start w-100">
-                    <div class="container-fluid">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-content" aria-controls="sidebar-content" aria-expanded="false">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="sidebar-content">
-                            <ul class="navbar-nav flex-column">
-                                <li class="nav-item py-1">
-                                    <a href="#" class="nav-link sidebar-link">
-                                        <div class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
-                                            <i class="fa-regular fa-file sidebar-icon"></i>
-                                        </div>
-                                        Sorğular
-                                    </a>
-                                </li>
-                                <li class="nav-item py-1">
-                                    <a href="#" class="nav-link sidebar-link">
-                                        <div class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
-                                            <i class="fa-solid fa-chart-column sidebar-icon"></i>
-                                        </div>
-                                        Hesabat
-                                    </a>
-                                </li>
-                                <li class="nav-item py-1">
-                                    <a href="profil.html" class="nav-link sidebar-link">
-                                        <div class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
-                                            <i class="fa-regular fa-user sidebar-icon"></i>
-                                        </div>
-                                        Profil
-                                    </a>
-                                </li>
-                                <li class="nav-item pt-lg-5">
-                                    <a href="#" class="nav-link position-relative start-50">
-                                        <div class="d-inline-flex align-items-center justify-content-center rounded mx-auto back-icon-style">
-                                            <i class="fa-solid fa-chevron-left"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#sidebar-content" aria-controls="sidebar-content" aria-expanded="false">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="sidebar-content">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-item py-1">
+                                <a href="requests.html" class="nav-link sidebar-link">
+                                    <div
+                                        class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
+                                        <i class="fa-regular fa-file sidebar-icon"></i>
+                                    </div>
+                                    Sorğular
+                                </a>
+                            </li>
+                            <li class="nav-item py-1">
+                                <a href="#" class="nav-link sidebar-link">
+                                    <div
+                                        class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
+                                        <i class="fa-solid fa-chart-column sidebar-icon"></i>
+                                    </div>
+                                    Hesabat
+                                </a>
+                            </li>
+                            <li class="nav-item py-1">
+                                <a href="profil.html" class="nav-link sidebar-link">
+                                    <div
+                                        class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
+                                        <i class="fa-regular fa-user sidebar-icon"></i>
+                                    </div>
+                                    Profil
+                                </a>
+                            </li>
+                            <li class="nav-item pt-lg-5">
+                                <a href="#" class="nav-link position-relative start-50">
+                                    <div
+                                        class="d-inline-flex align-items-center justify-content-center rounded mx-auto back-icon-style">
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </nav>
 
             </div>
 
-            <!-- Content -->
+            
 
-            <div class="col-lg-10 content-bg">
-                <div class="container">
+            <div class="col-lg-10 content-bg d-flex flex-column align-items-end">
+
+                <!-- Content -->
+
+                <div class="container mb-4 mb-md-0">
 
                     <div class="row">
                         <div class="col-12 mb-3">
                             <h4 class="profil pt-5">Profil</h4>
 
-                            <img src="images/user-icon.png" alt="user-image" class="img-thumbnail mt-4" width="94px"
+                            <img src="images/user-icon.png" alt="user-image" class="border border-white border-4 rounded mt-4" width="94px"
                                 height="94px">
 
                             <input id="file-input" type="file" class="d-none">
-                            <a href="#" class="btn pt-5 btn-style" role="button" onclick="document.getElementById('file-input').click()"><i class="fa-solid fa-pen me-2 opacity-50 btn-icon"></i>Şəkli dəyiş</a>
-                            
-                            <a href="#" class="btn pt-5 btn-style" role="button"><i class="fa-solid fa-trash-can me-2 opacity-50 btn-icon"></i>Şəkli sil</a>
+                            <a href="#" class="btn pt-5 btn-style" role="button"
+                                onclick="document.getElementById('file-input').click()"><i
+                                    class="fa-solid fa-pen me-2 opacity-50 btn-icon"></i>Şəkli dəyiş</a>
+
+                            <a href="#" class="btn pt-5 btn-style" role="button"><i
+                                    class="fa-solid fa-trash-can me-2 opacity-50 btn-icon"></i>Şəkli sil</a>
 
                             <p class="img-desc pt-3">İcazə verilən fayl tipləri: png, jpg, jpeg</p>
                         </div>
                     </div>
 
-                    <form action="">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group mb-3">
-                                    <label for="sobe" class="form-label label-style">Şöbə</label>
-                                    <input type="text" class="form-control input-style" id="sobe">
+                    <div class="row">
+                        <div class="col-12">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="sobe" class="form-label label-style">Şöbə</label>
+                                            <input type="text" class="form-control input-style" id="sobe">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label for="daxili-telefon" class="form-label label-style">Daxili telefon</label>
+                                            <input type="text" class="form-control input-style" id="daxili-telefon">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="vezife" class="form-label label-style">Vəzifə</label>
+                                            <input type="text" class="form-control input-style" id="vezife">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label for="mobil-telefon" class="form-label label-style">Mobil telefon</label>
+                                            <input type="text" class="form-control input-style" id="mobil-telefon">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group mb-3">
-                                    <label for="daxili-telefon" class="form-label label-style">Daxili telefon</label>
-                                    <input type="text" class="form-control input-style" id="daxili-telefon">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group mb-3">
-                                    <label for="vezife" class="form-label label-style">Vəzifə</label>
-                                    <input type="text" class="form-control input-style" id="vezife">
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label for="mobil-telefon" class="form-label label-style">Mobil telefon</label>
-                                    <input type="text" class="form-control input-style" id="mobil-telefon">
-                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-check form-switch p-0">
+                                <label class="form-check-label d-block switch-label-style" for="mySwitch">Bildirişə icazə
+                                    ver</label>
+                                <input class="form-check-input m-0 mt-2 shadow-none switch-input-style" type="checkbox"
+                                    role="switch" id="mySwitch" checked>
                             </div>
                         </div>
-                    </form>
-
-                    <div class="form-check form-switch p-0">
-                        <label class="form-check-label d-block switch-label-style" for="mySwitch">Bildirişə icazə ver</label> 
-                        <input class="form-check-input m-0 mt-2 shadow-none switch-input-style" type="checkbox" role="switch" id="mySwitch" checked>
                     </div>
 
                     <div class="row mt-5">
 
                         <div class="col-12 d-flex align-items-center justify-content-between">
 
-                            <a href="password.html" class="btn p-0 btn-style change-pswd" role="button">
-                                <div class="d-inline-flex align-items-center justify-content-center rounded me-2 lock-icon-style">
+                            <button type="button" class="btn p-0 btn-style change-pswd" data-bs-toggle="modal"
+                                data-bs-target="#change-password">
+                                <div
+                                    class="d-inline-flex align-items-center justify-content-center rounded me-2 lock-icon-style">
                                     <i class="fa-solid fa-lock child"></i>
                                 </div>
                                 Şifrəni dəyiş
-                            </a>
+                            </button>
 
                             <div>
                                 <button class="btn px-sm-5 btn-cancel" type="button">Ləğv et</button>
@@ -175,10 +197,124 @@
                         </div>
                     </div>
 
-                    <div class="footer mt-5">
-                        <p>Copyright &copy; CIC LLC</p>
+                </div>
+
+                <div class="container footer mt-auto">
+                    <p>Copyright &copy; CIC LLC</p>
+                </div>
+            </div>
+
+            <!-- Modals -->
+
+            <div class="col-12">
+
+                <!-- Change password form modal -->
+
+                <div class="modal fade" tabindex="-1" id="change-password" aria-hidden="true" data-bs-backdrop="static">
+                    <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content modal-bg">
+                            <div class="modal-body">
+
+                                <div class="container-fluid">
+
+                                    <div class="row mt-3 ps-sm-4">
+                                        <div class="col-12">
+                                            <button type="button" class="btn shadow-none border-0 p-0 btn-back"
+                                                data-bs-dismiss="modal" aria-label="close button">
+                                                <i class="fa-solid fa-chevron-left pe-2 btn-back-icon"></i>Geri
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-5">
+                                        <div class="col-12 col-sm-10 col-md-6 col-xl-4 mx-auto">
+
+                                            <div class="form-container bg-white p-5">
+
+                                                <form action="">
+
+                                                    <p class="text-center mb-5 form-header">Şifrənin dəyişdirilməsi</p>
+
+                                                    <div class="form-group mb-3">
+                                                        <label for="current-pswd" class="pswd-form-label">Hazırki
+                                                            şifrə</label>
+                                                        <input type="password"
+                                                            class="form-control form-control-lg shadow-none pswd-input"
+                                                            id="current-pswd">
+                                                    </div>
+
+                                                    <div class="form-group mb-3">
+                                                        <label for="new-pswd" class="pswd-form-label">Yeni şifrə</label>
+                                                        <input type="password"
+                                                            class="form-control form-control-lg shadow-none pswd-input"
+                                                            id="new-pswd" aria-describedby="new-pswd-info">
+                                                        <small id="new-pswd-info" class="form-text">Şifrə 8 simvol
+                                                            uzunluğunda olmalı, yalnız
+                                                            rəqəmlərdən ibarət olmamalı və əvvəl istifadə edilmiş şifrə
+                                                            olmamalıdır.</small>
+                                                    </div>
+
+                                                    <div class="form-group mb-3">
+                                                        <label for="new-pswd-repeat" class="pswd-form-label">Yeni
+                                                            şifrənin
+                                                            təkrarı</label>
+                                                        <input type="password"
+                                                            class="form-control form-control-lg shadow-none pswd-input"
+                                                            id="new-pswd-repeat">
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="d-grid">
+                                                                <button
+                                                                    class="btn btn-lg shadow-none pswd-form-btn-cancel"
+                                                                    data-bs-dismiss="modal">
+                                                                    Ləğv
+                                                                    et
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="d-grid">
+                                                                <button
+                                                                    class="btn btn-lg shadow-none pswd-form-btn-submit"
+                                                                    type="button" data-bs-toggle="modal"
+                                                                    data-bs-target="#success-modal">Təsdiqlə</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Success modal -->
+
+                <div class="modal fade" tabindex="-1" id="success-modal">
+                    <div class="modal-dialog modal-dialog-centered modal-sm">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="images/success-icon.png" alt="success-icon" class="d-block mx-auto"
+                                    width="90px" height="90px">
+                                <h5 class="text-center pt-3 success-modal-header">Şifrəniz dəyişdirildi!</h5>
+                                <p class="text-center success-modal-info pt-3">Şifrəniz uğurla dəyişdirildi. Daxil olmaq
+                                    üçün
+                                    yeni şifrənizi istifadə edin.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

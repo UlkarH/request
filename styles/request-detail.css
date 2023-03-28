@@ -1,0 +1,171 @@
+/* Header */
+
+.header {
+    color: #52525D;
+    font: normal normal 600 20px/20px Segoe UI;
+}
+
+.header-small {
+    color: #52525D;
+    font: normal normal normal 14px/20px Segoe UI;
+}
+
+.status {
+    color: #13AA58;
+    font: normal normal normal 14px/20px Segoe UI;
+}
+
+.status-strong {
+    font: normal normal 600 14px/20px Segoe UI;
+}
+
+
+/* Nav tabs */
+
+.nav-tabs-container .nav-tabs .nav-link.active,
+.nav-tabs-container .nav-tabs .nav-item.show .nav-link {
+    color: #55539F;
+    background-color: #F0F1F5;
+    border-color: #55539F;
+    border-bottom: 1px solid #F0F1F5;
+}
+
+.nav-tabs-style {
+    border-bottom: 1px solid #55539F;
+}
+
+.tabs-btn-style {
+    color: #55539F;
+}
+
+.tabs-btn-style:hover {
+    color: #55539F;
+}
+
+.badge-style {
+    background-color: #DBDCF380;
+    color: #6045E2;
+}
+
+/* Card-style */
+
+.card-title-custom {
+    color: #52525D;
+    font: normal normal 600 14px/19px Segoe UI;
+}
+
+.card-subtitle-custom {
+    color: #9E9E9E;
+    font: normal normal normal 13px/17px Segoe UI;
+}
+
+.card-text-small {
+    color: #9E9E9E;
+    font: normal normal normal 14px/20px Segoe UI;
+}
+
+.card-text-custom {
+    font: normal normal normal 14px/24px Segoe UI;
+}
+
+/* Button-style */
+
+.btn-custom-style {
+    color: #FFFFFF;
+    font: normal normal normal 14px/24px Segoe UI;
+    background: transparent linear-gradient(90deg, #6568F3 0%, var(--unnamed-color-6045e2) 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(90deg, #6568F3 0%, #6045E2 100%) 0% 0% no-repeat padding-box;
+}
+
+.btn-custom-style:hover {
+    color: #FFFFFF;
+    background: transparent linear-gradient(90deg, var(--unnamed-color-6045e2) 0%, #6568F3 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(90deg, #6045E2 0%, #6568F3 100%) 0% 0% no-repeat padding-box;
+}
+
+/* Form-style */
+
+.form-label {
+    color: #52525D;
+    font: normal normal 600 14px/19px Segoe UI;
+}
+
+.form-textbox {
+    resize: none;
+}
+
+.form-textbox:focus,
+.form-input-focus,
+.form-select-custom:focus {
+    border: 1px solid #CED4DA;
+}
+
+.file-input {
+    color: #212529;
+    font: normal normal normal 14px/24px Segoe UI;
+}
+
+.radio-custom:checked {
+    background-color: #13AA58;
+    border-color: #13AA58 !important;
+}
+
+.switch-custom {
+    background-color: #C9C9D5;
+    width: 39px!important;
+    height: 24px!important;
+}
+
+.switch-custom:checked{
+    background-color: #13AA58;
+}
+
+/* Request tab */
+
+.request-title {
+    color: #52525D;
+    font: normal normal 600 16px/21px Segoe UI;
+}
+
+.attachment {
+    color: #508FF4;
+    font: normal normal normal 14px/19px Segoe UI;
+}
+
+.btn-print {
+    color: #6045E2;
+}
+
+.print-icon-container {
+    width: 30px;
+    height: 30px;
+    background: rgb(85, 83, 159, 0.1);
+}
+
+.btn-print:hover {
+    color: #6045E2;
+    transition: 0.3s;
+}
+
+.btn-print:hover .print-icon {
+    opacity: 1 !important;
+    transition: 0.3s;
+}
+
+.request-cancel-btn {
+    color: #6045E2;
+    font: normal normal 600 14px/24px Segoe UI;
+    border: 1px solid #6045E2;
+}
+
+.request-cancel-btn:hover {
+    border: 1px solid #6045E2;
+    color: #6045E2;
+    background-color: #DBDCF380;
+}
+
+.request-cancel-btn:focus {
+    border: 1px solid #6045E2;
+    color: #6045E2;
+    background-color: #DBDCF380;
+}

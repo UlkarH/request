@@ -1,0 +1,65 @@
+/* Header */
+
+.new-request-header {
+    color: #52525D;
+    font: normal normal 600 20px/20px Segoe UI;
+}
+
+.request-btn-back {
+    color: #6045E2;
+    font: normal normal normal 14px/24px Segoe UI;
+}
+
+.request-btn-back:hover {
+    color: #6045E2;
+}
+
+.request-btn-back:hover .request-back-icon {
+    opacity: 1 !important;
+    transition: 0.3s;
+}
+
+/* Form */
+
+.request-form-label {
+    color: #52525D;
+    font: normal normal 600 14px/19px Segoe UI;
+}
+
+.request-form-elements:hover {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.request-form-elements:focus {
+    border: 1px solid #CED4DA;
+}
+
+.required::after {
+    content: " *";
+    color: red;
+}
+
+.request-textarea {
+    resize: none;
+}
+
+.request-form-btn {
+    background: transparent linear-gradient(90deg, #6568F3 0%, var(--unnamed-color-6045e2) 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(90deg, #6568F3 0%, #6045E2 100%) 0% 0% no-repeat padding-box;
+    font: normal normal normal 14px/24px Segoe UI;
+    color: #FFFFFF;
+}
+
+.request-form-btn:hover {
+    background: transparent linear-gradient(90deg, var(--unnamed-color-6045e2) 0%, #6568F3 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(90deg, #6045E2 0%, #6568F3 100%) 0% 0% no-repeat padding-box;
+    color: #FFFFFF;
+}
+
+/* Footer*/
+
+.footer {
+    font: normal normal normal 12px/20px Segoe UI;
+    color: #9E9E9EBF;
+}

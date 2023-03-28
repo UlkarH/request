@@ -1,60 +1,4 @@
-/* Navbar */
-
-.navbar-style{
-    height: 60px;
-}
-
-.icon-container{
-    width: 30px;
-    height: 30px;
-    background-color: rgb(158, 158, 158, 0.1);
-}
-.dropdown-icon-color{
-    color: #6045E2;
-}
-.dropdown-text-color{
-    color: #9E9E9E;
-}
-.dropdown-text-color:hover, .dropdown-text-color:focus{
-    color: #9E9E9E;
-}
-
-/* Sidebar*/
-
-.sidebar-bg{
-    background-color: #55539F;
-    min-height: 3vh;
-}
-
-.sidebar-icon-bg{
-    width: 30px;
-    height: 30px;
-    background-color: rgb(228,	228, 232, 0.2);
-}
-
-.back-icon-style{
-    width: 36px;
-    height: 36px;
-    background-color: rgb(228,	228, 232, 0.2) ;
-}
-
-.sidebar-link:hover .sidebar-icon{
-    color:#1BC167;
-    text-shadow: 0px 0px 10px #3DF988;
-    transition: 0.3s;
-}
-
-.sidebar-link:focus .sidebar-icon{
-    color:#1BC167;
-    text-shadow: 0px 0px 10px #3DF988;
-}
-
 /* Content */
-
-.content-bg{
-    background-color: #F0F1F5;
-    min-height: calc(100vh - 60px);
-}
 
 .profil{
     color: #52525D;
@@ -173,3 +117,94 @@
     color: #9E9E9EBF;
 }
 
+/* Change password form modal */
+
+.modal-bg{
+    background-color: #F0F1F5;
+}
+
+.btn-back {
+    color: #6045E2;
+    font: normal normal normal 14px/24px Segoe UI;
+}
+
+.btn-back:hover {
+    color: #6045E2;
+    font: normal normal normal 14px/24px Segoe UI;
+}
+
+.btn-back-icon {
+    opacity: 0.5;
+}
+
+.btn-back:hover .btn-back-icon {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.form-container {
+    box-shadow: 0px 0px 20px #E0C5F8;
+    border-radius: 4px;
+}
+
+.form-header {
+    color: #494294;
+    font: normal normal 600 16px/20px Segoe UI;
+}
+
+.pswd-form-label::after {
+    content: "*";
+    color: #ED4C4C;
+    font: normal normal 600 16px/21px Segoe UI;
+}
+
+.pswd-form-label {
+    color: #52525D;
+    font: normal normal normal 16px/21px Segoe UI;
+}
+
+.pswd-input:hover {
+    cursor: pointer;
+}
+
+.pswd-input:focus {
+    border: 1px solid #CED4DA;
+}
+
+.pswd-form-btn-cancel {
+    background-color: rgb(228, 228, 232, 0.45);
+    border: 1px solid rgb(228, 228, 232, 0.45);
+    color: rgb(82, 82, 93, 0.6);
+    font: normal normal 600 16px/24px Segoe UI;
+    ;
+}
+
+.pswd-form-btn-cancel:hover {
+    background-color: rgb(228, 228, 232, 1);
+    border: 1px solid rgb(228, 228, 232, 1);
+    color: rgb(82, 82, 93, 1);
+    transition: 0.3s;
+}
+
+.pswd-form-btn-submit {
+    background: transparent linear-gradient(90deg, #6568F3 0%, var(--unnamed-color-6045e2) 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(90deg, #6568F3 0%, #6045E2 100%) 0% 0% no-repeat padding-box;
+    color: #FFFFFF;
+    font: normal normal normal 16px/24px Segoe UI;
+}
+
+.pswd-form-btn-submit:hover {
+    color: #FFFFFF
+}
+
+/* Success modal */
+
+.success-modal-header {
+    color: #52525D;
+    font: normal normal 600 20px/20px Segoe UI;
+}
+
+.success-modal-info {
+    color: #52525D;
+    font: normal normal normal 14px/20px Segoe UI;
+}

@@ -1,0 +1,30 @@
+/* Content */
+
+.header-style {
+    color: #52525D;
+    font: normal normal 600 20px/20px Segoe UI;
+}
+
+.select-style {
+    /* width: 398px; */
+    color: #52525D;
+    font: normal normal normal 14px/24px Segoe UI;
+}
+
+.select-style:hover {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.select-style:focus {
+    border: 1px solid #CED4DA;
+}
+
+.create-request-btn {
+    background: transparent linear-gradient(90deg, #6568F3 0%, var(--unnamed-color-6045e2) 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(90deg, #6568F3 0%, #6045E2 100%) 0% 0% no-repeat padding-box;
+}
+
+.create-request-btn:hover{
+    transition: 0.3s;
+}
