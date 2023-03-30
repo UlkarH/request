@@ -1,0 +1,28 @@
+.table-header {
+    color: #52525D;
+    font: normal normal 600 14px/19px Segoe UI;
+}
+
+.table-body{
+    font: normal normal normal 14px/24px Segoe UI;
+    color: #52525D;
+}
+
+.column-search-box {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+.table-container .dataTables_wrapper .dataTables_length select {
+    width: 4rem;
+    margin: 0 1rem;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+}
+
+.table-container .dataTables_wrapper .dataTables_length label{
+    font: normal normal normal 14px/24px Segoe UI;
+    color: #52525D;
+}
+

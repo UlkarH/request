@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/reports.css">
+
+    <!-- Table CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.2.3/css/fixedHeader.dataTables.min.css">
+
+    <!-- Font-awesome -->
+    <script src="https://kit.fontawesome.com/474e853496.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand border-bottom shadow-sm bg-white w-100 navbar-style position-sticky top-0 z-3">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">
+                <img src="images/cic_logo.png" alt="logo" width="77" height="36">
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle dropdown-text-color" id="profil-dropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <div
+                            class="d-inline-flex align-items-center justify-content-center rounded icon-container me-1">
+                            <i class="fa-regular fa-user dropdown-icon-color"></i>
+                        </div>
+                        Sona Ahmadova
+                    </a>
+                    <ul class="dropdown-menu mt-2 ms-3" aria-labelledby="profil-dropdown">
+                        <li><a href="profil.html" class="dropdown-item dropdown-text-color"><i
+                                    class="fa-solid fa-user pe-3"></i>Profil</a></li>
+                        <li><a href="#change-password" class="dropdown-item dropdown-text-color"
+                                data-bs-toggle="modal"><i class="fa-solid fa-lock pe-3"></i>Şifrəni yenilə</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a href="login.html" class="dropdown-item dropdown-text-color"><i
+                                    class="fa-solid fa-right-from-bracket pe-3"></i>Çıxış</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Sidebar -->
+
+            <div class="col-lg-2 sidebar-bg">
+
+                <nav class="navbar navbar-expand-lg navbar-dark align-items-start w-100">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#sidebar-content" aria-controls="sidebar-content" aria-expanded="false">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse position-fixed" id="sidebar-content">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-item py-1">
+                                <a href="requests.html" class="nav-link sidebar-link">
+                                    <div
+                                        class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
+                                        <i class="fa-regular fa-file sidebar-icon"></i>
+                                    </div>
+                                    Sorğular
+                                </a>
+                            </li>
+                            <li class="nav-item py-1">
+                                <a href="reports.html" class="nav-link sidebar-link">
+                                    <div
+                                        class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
+                                        <i class="fa-solid fa-chart-column sidebar-icon"></i>
+                                    </div>
+                                    Hesabat
+                                </a>
+                            </li>
+                            <li class="nav-item py-1">
+                                <a href="profil.html" class="nav-link sidebar-link">
+                                    <div
+                                        class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
+                                        <i class="fa-regular fa-user sidebar-icon"></i>
+                                    </div>
+                                    Profil
+                                </a>
+                            </li>
+                            <li class="nav-item pt-lg-5">
+                                <a href="#" class="nav-link position-relative start-50">
+                                    <div
+                                        class="d-inline-flex align-items-center justify-content-center rounded mx-auto back-icon-style">
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+
+            <!-- Content -->
+
+            <div class="col-lg-10 py-3 content-bg d-flex flex-column align-items-end">
+                <div class="container mb-3 mb-xxl-0">
+
+                    <!-- Header -->
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <h4>Hesabat</h4>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-md-6 d-flex">
+                            <label for="date-picker" class="pe-2">Tarix aralığı</label>
+                            <input type="date" id="date-picker" class="form-control w-50">
+                            <!-- <div class="row">                              
+                                <div class="col-xxl-2 mb-2 mb-xxl-0">
+                                    <label for="date-picker" class="d-inline">Tarix aralığı</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="date" id="date-picker" class="form-control">
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="col-md-6 d-flex justify-content-md-end mt-3 mt-md-0">
+                            <button class="btn btn-primary" type="button">Excel faylına köçür</button>
+                        </div>
+                    </div>
+
+                    <!-- Table -->
+
+                    <div class="row mt-4 px-3 py-4 bg-white rounded">
+                        <div class="col-12 table-container table-responsive">
+                            <table id="example" class="table table-hover">
+                                <thead class="table-header">
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Göndərən</th>
+                                        <th scope="col">Kateqoriya</th>
+                                        <th scope="col">Tarix</th>
+                                        <th scope="col">İlk icra tarixi</th>
+                                        <th scope="col">İcra müddəti</th>
+                                        <th scope="col">İcra edən</th>
+                                        <th scope="col">Bağlanma tarixi</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="align-middle table-body">
+                                    <tr>
+                                        <td>32544</td>
+                                        <td>elshan.sharifov</td>
+                                        <td>İRD test proqramı</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>1.95</td>
+                                        <td>neriman.nehmedov</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>
+                                            <p class="m-0 py-1 border border-2 border-primary rounded">QAPALI</p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>30544</td>
+                                        <td>arif.sharifov</td>
+                                        <td>İRD test proqramı</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>1.95</td>
+                                        <td>neriman.nehmedov</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>
+                                            <p class="m-0 border border-2 border-primary rounded">QAPALI</p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>61902</td>
+                                        <td>Vuqar.Samadov</td>
+                                        <td>Agis - Proqram təminatı</td>
+                                        <td>02.11.2021 10:41</td>
+                                        <td>02.11.2021 10:41</td>
+                                        <td>17.37</td>
+                                        <td>Kenan.Mikayilov</td>
+                                        <td>02.11.2021 10:41</td>
+                                        <td>
+                                            <p class="m-0 border border-2 border-primary rounded">QAPALI</p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>71256</td>
+                                        <td>tahir.sharifov</td>
+                                        <td>İRD test proqramı</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>1.95</td>
+                                        <td>neriman.nehmedov</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>
+                                            <p class="m-0 border border-2 border-success rounded">TƏSDİQLƏNDİ</p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>27823</td>
+                                        <td>elshan.sharifov</td>
+                                        <td>İRD test proqramı</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>1.95</td>
+                                        <td>neriman.nehmedov</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>
+                                            <p class="m-0 border border-2 border-success rounded">TƏSDİQLƏNDİ</p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>32544</td>
+                                        <td>elshan.sharifov</td>
+                                        <td>İRD test proqramı</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>1.95</td>
+                                        <td>neriman.nehmedov</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>
+                                            <p class="m-0 border border-2 border-primary rounded">QAPALI</p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>32544</td>
+                                        <td>elshan.sharifov</td>
+                                        <td>İRD test proqramı</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>1.95</td>
+                                        <td>neriman.nehmedov</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>
+                                            <p class="m-0 border border-2 border-primary rounded">QAPALI</p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>32544</td>
+                                        <td>elshan.sharifov</td>
+                                        <td>İRD test proqramı</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>1.95</td>
+                                        <td>neriman.nehmedov</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>
+                                            <p class="m-0 border border-2 border-primary rounded">QAPALI</p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>32544</td>
+                                        <td>elshan.sharifov</td>
+                                        <td>İRD test proqramı</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>1.95</td>
+                                        <td>neriman.nehmedov</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>
+                                            <p class="m-0 border border-2 border-primary rounded">QAPALI</p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>32544</td>
+                                        <td>elshan.sharifov</td>
+                                        <td>İRD test proqramı</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>1.95</td>
+                                        <td>neriman.nehmedov</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>
+                                            <p class="m-0 border border-2 border-primary rounded">QAPALI</p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>32544</td>
+                                        <td>elshan.sharifov</td>
+                                        <td>İRD test proqramı</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>1.95</td>
+                                        <td>neriman.nehmedov</td>
+                                        <td>02.11.2021 14:16</td>
+                                        <td>
+                                            <p class="m-0 border border-2 border-success rounded">TƏSDİQLƏNDİ</p>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="container mt-auto">
+                    <p class="m-0 footer">Copyright &copy; CIC LLC</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- Data table js  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.2.3/js/dataTables.fixedHeader.min.js"></script>
+
+    <script>
+
+        // Data table CSS 
+        $(document).ready(function () {
+            // Setup - add a text input to each footer cell
+            $('#example thead tr')
+                .clone(true)
+                .addClass('filters')
+                .appendTo('#example thead');
+
+            var table = $('#example').DataTable({
+                orderCellsTop: true,
+                fixedHeader: true,
+                initComplete: function () {
+                    var api = this.api();
+
+                    // For each column
+                    api
+                        .columns()
+                        .eq(0)
+                        .each(function (colIdx) {
+                            // Set the header cell to contain the input element
+                            var cell = $('.filters th').eq(
+                                $(api.column(colIdx).header()).index()
+                            );
+                            //var title = $(cell).text();
+                            $(cell).html('<input type="text" placeholder="Search ..." class="column-search-box"/>');
+
+                            // On every keypress in this input
+                            $(
+                                'input',
+                                $('.filters th').eq($(api.column(colIdx).header()).index())
+                            )
+                                .off('keyup change')
+                                .on('change', function (e) {
+                                    // Get the search value
+                                    $(this).attr('title', $(this).val());
+                                    var regexr = '({search})'; 
+                                    $(this).parents('th').find('select').val();
+
+                                    var cursorPosition = this.selectionStart;
+                                    // Search the column for that value
+                                    api
+                                        .column(colIdx)
+                                        .search(
+                                            this.value != ''
+                                                ? regexr.replace('{search}', '(((' + this.value + ')))')
+                                                : '',
+                                            this.value != '',
+                                            this.value == ''
+                                        )
+                                        .draw();
+                                })
+                                .on('keyup', function (e) {
+                                    e.stopPropagation();
+
+                                    $(this).trigger('change');
+                                    $(this)
+                                        .focus()[0]
+                                        .setSelectionRange(cursorPosition, cursorPosition);
+                                });
+                        });
+                },
+                
+                "language": {
+                    "sProcessing": "Procesando...",
+                    "sLengthMenu": "Göstərilir _MENU_ sorğu",
+                    "sZeroRecords": "Heç bir nəticə tapılmadı",
+                    "sEmptyTable": "Bu cədvəldə heç bir məlumat yoxdur",
+                    "sInfo": "_TOTAL_ nəticədən _START_-dən _END_-a qədər göstərilir",
+                    // "sInfoEmpty": "0 nəticədən 0-dan 0-a qədər göstərilir",
+                    // "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+                    "sInfoPostFix": "",
+                    "sSearch": "Axtar:",
+                    "sUrl": "",
+                    "sInfoThousands": ",",
+                    // "sLoadingRecords": "Cargando...",
+                    "oPaginate": {
+                        // "sFirst": "Primero",
+                        // "sLast": "Último",
+                        "sNext": "Sonrakı",
+                        "sPrevious": "Əvvəlki"
+                    },
+                    // "oAria": {
+                    //     "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+                    //     "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                    // }
+                }
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>
