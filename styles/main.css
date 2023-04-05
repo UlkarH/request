@@ -44,10 +44,10 @@
     transition: 0.3s;
 }
 
-.sidebar-link:focus .sidebar-icon{
+/* .sidebar-link:active .sidebar-icon{
     color:#1BC167;
     text-shadow: 0px 0px 10px #3DF988;
-}
+} */
 
 /* Content */
 

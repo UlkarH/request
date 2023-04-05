@@ -115,19 +115,29 @@
             <!-- Content -->
 
             <div class="col-lg-10 py-3 content-bg d-flex flex-column align-items-end">
-                <div class="container mb-3 mb-xxl-0">
+                <div class="container px-4 mb-4">
 
                     <!-- Header -->
                     <div class="row mt-4">
-                        <div class="col-12">
-                            <h4>Hesabat</h4>
+                        <div class="col-12 p-0">
+                            <h4 class="page-title">Hesabat</h4>
                         </div>
                     </div>
 
                     <div class="row mt-4">
-                        <div class="col-md-6 d-flex">
-                            <label for="date-picker" class="pe-2">Tarix aralığı</label>
-                            <input type="date" id="date-picker" class="form-control w-50">
+                        <div class="col-md-6 p-0 d-flex">
+                            <div class="row">
+                                <div class="col-auto d-flex align-items-center">
+                                    <label for="date-picker" class="form-label m-0">Tarix aralığı</label>
+                                </div>
+                                <div class="col-auto">
+                                    <input type="date" id="date-picker" class="form-control input-custom shadow-none">
+                                </div>
+                            </div>
+
+                            <!-- <label for="date-picker" class="pe-2">Tarix aralığı</label>
+                            <input type="date" id="date-picker" class="form-control w-50"> -->
+
                             <!-- <div class="row">                              
                                 <div class="col-xxl-2 mb-2 mb-xxl-0">
                                     <label for="date-picker" class="d-inline">Tarix aralığı</label>
@@ -137,17 +147,17 @@
                                 </div>
                             </div> -->
                         </div>
-                        <div class="col-md-6 d-flex justify-content-md-end mt-3 mt-md-0">
-                            <button class="btn btn-primary" type="button">Excel faylına köçür</button>
+                        <div class="col-md-6 p-0 d-flex justify-content-md-end mt-3 mt-md-0">
+                            <button class="btn px-4 btn-custom" type="button">Excel faylına köçür</button>
                         </div>
                     </div>
 
                     <!-- Table -->
 
                     <div class="row mt-4 px-3 py-4 bg-white rounded">
-                        <div class="col-12 table-container table-responsive">
-                            <table id="example" class="table table-hover">
-                                <thead class="table-header">
+                        <div class="col-12 table-responsive table-container">
+                            <table id="example" class="table table-hover rounded table-custom">
+                                <thead class="align-middle table-header">
                                     <tr>
                                         <th scope="col">ID</th>
                                         <th scope="col">Göndərən</th>
@@ -171,7 +181,7 @@
                                         <td>neriman.nehmedov</td>
                                         <td>02.11.2021 14:16</td>
                                         <td>
-                                            <p class="m-0 py-1 border border-2 border-primary rounded">QAPALI</p>
+                                            <p class="m-0 text-center rounded status-private">QAPALI</p>
                                         </td>
                                     </tr>
 
@@ -185,7 +195,7 @@
                                         <td>neriman.nehmedov</td>
                                         <td>02.11.2021 14:16</td>
                                         <td>
-                                            <p class="m-0 border border-2 border-primary rounded">QAPALI</p>
+                                            <p class="m-0 text-center rounded status-private">QAPALI</p>
                                         </td>
                                     </tr>
 
@@ -199,7 +209,7 @@
                                         <td>Kenan.Mikayilov</td>
                                         <td>02.11.2021 10:41</td>
                                         <td>
-                                            <p class="m-0 border border-2 border-primary rounded">QAPALI</p>
+                                            <p class="m-0 text-center rounded status-private">QAPALI</p>
                                         </td>
                                     </tr>
 
@@ -213,7 +223,7 @@
                                         <td>neriman.nehmedov</td>
                                         <td>02.11.2021 14:16</td>
                                         <td>
-                                            <p class="m-0 border border-2 border-success rounded">TƏSDİQLƏNDİ</p>
+                                            <p class="m-0 text-center rounded status-confirmed">TƏSDİQLƏNDİ</p>
                                         </td>
                                     </tr>
 
@@ -227,7 +237,7 @@
                                         <td>neriman.nehmedov</td>
                                         <td>02.11.2021 14:16</td>
                                         <td>
-                                            <p class="m-0 border border-2 border-success rounded">TƏSDİQLƏNDİ</p>
+                                            <p class="m-0 text-center rounded status-confirmed">TƏSDİQLƏNDİ</p>
                                         </td>
                                     </tr>
 
@@ -241,7 +251,7 @@
                                         <td>neriman.nehmedov</td>
                                         <td>02.11.2021 14:16</td>
                                         <td>
-                                            <p class="m-0 border border-2 border-primary rounded">QAPALI</p>
+                                            <p class="m-0 text-center rounded status-private">QAPALI</p>
                                         </td>
                                     </tr>
 
@@ -255,7 +265,7 @@
                                         <td>neriman.nehmedov</td>
                                         <td>02.11.2021 14:16</td>
                                         <td>
-                                            <p class="m-0 border border-2 border-primary rounded">QAPALI</p>
+                                            <p class="m-0 text-center rounded status-private">QAPALI</p>
                                         </td>
                                     </tr>
 
@@ -269,7 +279,7 @@
                                         <td>neriman.nehmedov</td>
                                         <td>02.11.2021 14:16</td>
                                         <td>
-                                            <p class="m-0 border border-2 border-primary rounded">QAPALI</p>
+                                            <p class="m-0 text-center rounded status-private">QAPALI</p>
                                         </td>
                                     </tr>
 
@@ -283,7 +293,7 @@
                                         <td>neriman.nehmedov</td>
                                         <td>02.11.2021 14:16</td>
                                         <td>
-                                            <p class="m-0 border border-2 border-primary rounded">QAPALI</p>
+                                            <p class="m-0 text-center rounded status-private">QAPALI</p>
                                         </td>
                                     </tr>
 
@@ -297,7 +307,7 @@
                                         <td>neriman.nehmedov</td>
                                         <td>02.11.2021 14:16</td>
                                         <td>
-                                            <p class="m-0 border border-2 border-primary rounded">QAPALI</p>
+                                            <p class="m-0 text-center rounded status-private">QAPALI</p>
                                         </td>
                                     </tr>
 
@@ -311,7 +321,7 @@
                                         <td>neriman.nehmedov</td>
                                         <td>02.11.2021 14:16</td>
                                         <td>
-                                            <p class="m-0 border border-2 border-success rounded">TƏSDİQLƏNDİ</p>
+                                            <p class="m-0 text-center rounded status-confirmed">TƏSDİQLƏNDİ</p>
                                         </td>
                                     </tr>
 
@@ -406,13 +416,13 @@
                 },
                 
                 "language": {
-                    "sProcessing": "Procesando...",
+                    // "sProcessing": "Procesando...",
                     "sLengthMenu": "Göstərilir _MENU_ sorğu",
                     "sZeroRecords": "Heç bir nəticə tapılmadı",
                     "sEmptyTable": "Bu cədvəldə heç bir məlumat yoxdur",
                     "sInfo": "_TOTAL_ nəticədən _START_-dən _END_-a qədər göstərilir",
-                    // "sInfoEmpty": "0 nəticədən 0-dan 0-a qədər göstərilir",
-                    // "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+                    "sInfoEmpty": "0 nəticədən 0-dan 0-a qədər göstərilir",
+                    "sInfoFiltered": "",
                     "sInfoPostFix": "",
                     "sSearch": "Axtar:",
                     "sUrl": "",
@@ -421,8 +431,8 @@
                     "oPaginate": {
                         // "sFirst": "Primero",
                         // "sLast": "Último",
-                        "sNext": "Sonrakı",
-                        "sPrevious": "Əvvəlki"
+                        "sNext": "&#8250",
+                        "sPrevious": "&#8249"
                     },
                     // "oAria": {
                     //     "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
