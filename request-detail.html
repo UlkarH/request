@@ -22,7 +22,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand border-bottom shadow-sm bg-white w-100 navbar-style position-sticky top-0 z-3">
+    <nav class="navbar navbar-expand border-bottom shadow-sm bg-white w-100 navbar-style position-fixed top-0 z-3">
         <div class="container-fluid">
             <a href="#" class="navbar-brand">
                 <img src="images/cic_logo.png" alt="logo" width="77" height="36">
@@ -60,12 +60,12 @@
 
             <div class="col-lg-2 sidebar-bg">
 
-                <nav class="navbar navbar-expand-lg navbar-dark align-items-start w-100">
+                <nav class="navbar navbar-expand-lg navbar-dark align-items-start w-100 position-sticky sidebar-style">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#sidebar-content" aria-controls="sidebar-content" aria-expanded="false">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse position-fixed" id="sidebar-content">
+                    <div class="collapse navbar-collapse" id="sidebar-content">
                         <ul class="navbar-nav flex-column">
                             <li class="nav-item py-1">
                                 <a href="requests.html" class="nav-link sidebar-link">
@@ -110,11 +110,11 @@
 
             <!-- Content -->
 
-            <div class="col-lg-10 py-3 content-bg d-flex flex-column align-items-end">
-                <div class="container mb-3 mb-xxl-0">
+            <div class="col-lg-10 content-bg d-flex flex-column align-items-end">
+                <div class="container-fluid mb-4 mb-xxl-0">
 
                     <!-- Header -->
-                    <div class="row mt-4">
+                    <div class="row mt-5">
                         <div class="col-md-6">
                             <h5 class="header">Request 33457 <small class="header-small">İTRON veb hesabat</small></h5>
                         </div>
@@ -507,7 +507,7 @@
                                             <label for="" class="form-label d-block mt-3">Əlaqə vasitəsi</label>
                                             <div class="form-check form-check-inline mt-2">
                                                 <input type="radio" class="form-check-input shadow-none radio-custom" name="contact"
-                                                    id="email">
+                                                    id="email" checked>
                                                 <label for="email">Email</label>
                                             </div>
                                             <div class="form-check form-check-inline">
@@ -557,8 +557,8 @@
 
                 </div>
 
-                <div class="container mt-auto">
-                    <p class="m-0 footer">Copyright &copy; CIC LLC</p>
+                <div class="container-fluid mt-auto">
+                    <p class="footer">Copyright &copy; CIC LLC</p>
                 </div>
             </div>
 

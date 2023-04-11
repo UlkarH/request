@@ -11,13 +11,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/reports.css">
+    <!-- Date range picker -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
     <!-- Table CSS -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.2.3/css/fixedHeader.dataTables.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/reports.css">
 
     <!-- Font-awesome -->
     <script src="https://kit.fontawesome.com/474e853496.js" crossorigin="anonymous"></script>
@@ -26,7 +29,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand border-bottom shadow-sm bg-white w-100 navbar-style position-sticky top-0 z-3">
+    <nav class="navbar navbar-expand border-bottom shadow-sm bg-white w-100 navbar-style position-fixed top-0 z-3">
         <div class="container-fluid">
             <a href="#" class="navbar-brand">
                 <img src="images/cic_logo.png" alt="logo" width="77" height="36">
@@ -64,49 +67,51 @@
 
             <div class="col-lg-2 sidebar-bg">
 
-                <nav class="navbar navbar-expand-lg navbar-dark align-items-start w-100">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#sidebar-content" aria-controls="sidebar-content" aria-expanded="false">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse position-fixed" id="sidebar-content">
-                        <ul class="navbar-nav flex-column">
-                            <li class="nav-item py-1">
-                                <a href="requests.html" class="nav-link sidebar-link">
-                                    <div
-                                        class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
-                                        <i class="fa-regular fa-file sidebar-icon"></i>
-                                    </div>
-                                    Sorğular
-                                </a>
-                            </li>
-                            <li class="nav-item py-1">
-                                <a href="reports.html" class="nav-link sidebar-link">
-                                    <div
-                                        class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
-                                        <i class="fa-solid fa-chart-column sidebar-icon"></i>
-                                    </div>
-                                    Hesabat
-                                </a>
-                            </li>
-                            <li class="nav-item py-1">
-                                <a href="profil.html" class="nav-link sidebar-link">
-                                    <div
-                                        class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
-                                        <i class="fa-regular fa-user sidebar-icon"></i>
-                                    </div>
-                                    Profil
-                                </a>
-                            </li>
-                            <li class="nav-item pt-lg-5">
-                                <a href="#" class="nav-link position-relative start-50">
-                                    <div
-                                        class="d-inline-flex align-items-center justify-content-center rounded mx-auto back-icon-style">
-                                        <i class="fa-solid fa-chevron-left"></i>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                <nav class="navbar navbar-expand-lg navbar-dark align-items-start w-100 position-sticky">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#sidebar-content" aria-controls="sidebar-content" aria-expanded="false">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="sidebar-content">
+                            <ul class="navbar-nav flex-column mt-3 mt-lg-2">
+                                <li class="nav-item py-1">
+                                    <a href="requests.html" class="nav-link sidebar-link">
+                                        <div
+                                            class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
+                                            <i class="fa-regular fa-file sidebar-icon"></i>
+                                        </div>
+                                        Sorğular
+                                    </a>
+                                </li>
+                                <li class="nav-item py-1">
+                                    <a href="reports.html" class="nav-link sidebar-link">
+                                        <div
+                                            class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
+                                            <i class="fa-solid fa-chart-column sidebar-icon"></i>
+                                        </div>
+                                        Hesabat
+                                    </a>
+                                </li>
+                                <li class="nav-item py-1">
+                                    <a href="profil.html" class="nav-link sidebar-link">
+                                        <div
+                                            class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
+                                            <i class="fa-regular fa-user sidebar-icon"></i>
+                                        </div>
+                                        Profil
+                                    </a>
+                                </li>
+                                <li class="nav-item pt-lg-5">
+                                    <a href="#" class="nav-link position-relative start-50">
+                                        <div
+                                            class="d-inline-flex align-items-center justify-content-center rounded mx-auto back-icon-style">
+                                            <i class="fa-solid fa-chevron-left"></i>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
 
@@ -114,24 +119,25 @@
 
             <!-- Content -->
 
-            <div class="col-lg-10 py-3 content-bg d-flex flex-column align-items-end">
-                <div class="container px-4 mb-4">
+            <div class="col-lg-10 content-bg d-flex flex-column align-items-end">
+                <div class="container-fluid mb-4">
 
                     <!-- Header -->
-                    <div class="row mt-4">
-                        <div class="col-12 p-0">
+                    <div class="row mt-5">
+                        <div class="col-12">
                             <h4 class="page-title">Hesabat</h4>
                         </div>
                     </div>
 
                     <div class="row mt-4">
-                        <div class="col-md-6 p-0 d-flex">
+                        <div class="col-md-6 d-flex">
                             <div class="row">
                                 <div class="col-auto d-flex align-items-center">
                                     <label for="date-picker" class="form-label m-0">Tarix aralığı</label>
                                 </div>
                                 <div class="col-auto">
-                                    <input type="date" id="date-picker" class="form-control input-custom shadow-none">
+                                    <input type="text" id="date-picker" name="dates"
+                                        class="form-control input-custom shadow-none">
                                 </div>
                             </div>
 
@@ -147,194 +153,203 @@
                                 </div>
                             </div> -->
                         </div>
-                        <div class="col-md-6 p-0 d-flex justify-content-md-end mt-3 mt-md-0">
+                        <div class="col-md-6 d-flex justify-content-md-end mt-3 mt-md-0">
                             <button class="btn px-4 btn-custom" type="button">Excel faylına köçür</button>
                         </div>
                     </div>
 
                     <!-- Table -->
 
-                    <div class="row mt-4 px-3 py-4 bg-white rounded">
-                        <div class="col-12 table-responsive table-container">
-                            <table id="example" class="table table-hover rounded table-custom">
-                                <thead class="align-middle table-header">
-                                    <tr>
-                                        <th scope="col">ID</th>
-                                        <th scope="col">Göndərən</th>
-                                        <th scope="col">Kateqoriya</th>
-                                        <th scope="col">Tarix</th>
-                                        <th scope="col">İlk icra tarixi</th>
-                                        <th scope="col">İcra müddəti</th>
-                                        <th scope="col">İcra edən</th>
-                                        <th scope="col">Bağlanma tarixi</th>
-                                        <th scope="col">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="align-middle table-body">
-                                    <tr>
-                                        <td>32544</td>
-                                        <td>elshan.sharifov</td>
-                                        <td>İRD test proqramı</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>1.95</td>
-                                        <td>neriman.nehmedov</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>
-                                            <p class="m-0 text-center rounded status-private">QAPALI</p>
-                                        </td>
-                                    </tr>
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body px-4">
+                                    <div class="table-responsive table-container">
+                                        <table id="example" class="table table-hover rounded table-custom">
+                                            <thead class="align-middle table-header">
+                                                <tr>
+                                                    <th scope="col">ID</th>
+                                                    <th scope="col">Göndərən</th>
+                                                    <th scope="col">Kateqoriya</th>
+                                                    <th scope="col">Tarix</th>
+                                                    <th scope="col">İlk icra tarixi</th>
+                                                    <th scope="col">İcra müddəti</th>
+                                                    <th scope="col">İcra edən</th>
+                                                    <th scope="col">Bağlanma tarixi</th>
+                                                    <th scope="col">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="align-middle table-body">
+                                                <tr>
+                                                    <td>32544</td>
+                                                    <td>elshan.sharifov</td>
+                                                    <td>İRD test proqramı</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>1.95</td>
+                                                    <td>neriman.nehmedov</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>
+                                                        <p class="m-0 text-center rounded status-private">QAPALI</p>
+                                                    </td>
+                                                </tr>
 
-                                    <tr>
-                                        <td>30544</td>
-                                        <td>arif.sharifov</td>
-                                        <td>İRD test proqramı</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>1.95</td>
-                                        <td>neriman.nehmedov</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>
-                                            <p class="m-0 text-center rounded status-private">QAPALI</p>
-                                        </td>
-                                    </tr>
+                                                <tr>
+                                                    <td>30544</td>
+                                                    <td>arif.sharifov</td>
+                                                    <td>İRD test proqramı</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>1.95</td>
+                                                    <td>neriman.nehmedov</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>
+                                                        <p class="m-0 text-center rounded status-private">QAPALI</p>
+                                                    </td>
+                                                </tr>
 
-                                    <tr>
-                                        <td>61902</td>
-                                        <td>Vuqar.Samadov</td>
-                                        <td>Agis - Proqram təminatı</td>
-                                        <td>02.11.2021 10:41</td>
-                                        <td>02.11.2021 10:41</td>
-                                        <td>17.37</td>
-                                        <td>Kenan.Mikayilov</td>
-                                        <td>02.11.2021 10:41</td>
-                                        <td>
-                                            <p class="m-0 text-center rounded status-private">QAPALI</p>
-                                        </td>
-                                    </tr>
+                                                <tr>
+                                                    <td>61902</td>
+                                                    <td>Vuqar.Samadov</td>
+                                                    <td>Agis - Proqram təminatı</td>
+                                                    <td>02.11.2021 10:41</td>
+                                                    <td>02.11.2021 10:41</td>
+                                                    <td>17.37</td>
+                                                    <td>Kenan.Mikayilov</td>
+                                                    <td>02.11.2021 10:41</td>
+                                                    <td>
+                                                        <p class="m-0 text-center rounded status-private">QAPALI</p>
+                                                    </td>
+                                                </tr>
 
-                                    <tr>
-                                        <td>71256</td>
-                                        <td>tahir.sharifov</td>
-                                        <td>İRD test proqramı</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>1.95</td>
-                                        <td>neriman.nehmedov</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>
-                                            <p class="m-0 text-center rounded status-confirmed">TƏSDİQLƏNDİ</p>
-                                        </td>
-                                    </tr>
+                                                <tr>
+                                                    <td>71256</td>
+                                                    <td>tahir.sharifov</td>
+                                                    <td>İRD test proqramı</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>1.95</td>
+                                                    <td>neriman.nehmedov</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>
+                                                        <p class="m-0 text-center rounded status-confirmed">TƏSDİQLƏNDİ
+                                                        </p>
+                                                    </td>
+                                                </tr>
 
-                                    <tr>
-                                        <td>27823</td>
-                                        <td>elshan.sharifov</td>
-                                        <td>İRD test proqramı</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>1.95</td>
-                                        <td>neriman.nehmedov</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>
-                                            <p class="m-0 text-center rounded status-confirmed">TƏSDİQLƏNDİ</p>
-                                        </td>
-                                    </tr>
+                                                <tr>
+                                                    <td>27823</td>
+                                                    <td>elshan.sharifov</td>
+                                                    <td>İRD test proqramı</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>1.95</td>
+                                                    <td>neriman.nehmedov</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>
+                                                        <p class="m-0 text-center rounded status-confirmed">TƏSDİQLƏNDİ
+                                                        </p>
+                                                    </td>
+                                                </tr>
 
-                                    <tr>
-                                        <td>32544</td>
-                                        <td>elshan.sharifov</td>
-                                        <td>İRD test proqramı</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>1.95</td>
-                                        <td>neriman.nehmedov</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>
-                                            <p class="m-0 text-center rounded status-private">QAPALI</p>
-                                        </td>
-                                    </tr>
+                                                <tr>
+                                                    <td>32544</td>
+                                                    <td>elshan.sharifov</td>
+                                                    <td>İRD test proqramı</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>1.95</td>
+                                                    <td>neriman.nehmedov</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>
+                                                        <p class="m-0 text-center rounded status-private">QAPALI</p>
+                                                    </td>
+                                                </tr>
 
-                                    <tr>
-                                        <td>32544</td>
-                                        <td>elshan.sharifov</td>
-                                        <td>İRD test proqramı</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>1.95</td>
-                                        <td>neriman.nehmedov</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>
-                                            <p class="m-0 text-center rounded status-private">QAPALI</p>
-                                        </td>
-                                    </tr>
+                                                <tr>
+                                                    <td>32544</td>
+                                                    <td>elshan.sharifov</td>
+                                                    <td>İRD test proqramı</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>1.95</td>
+                                                    <td>neriman.nehmedov</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>
+                                                        <p class="m-0 text-center rounded status-private">QAPALI</p>
+                                                    </td>
+                                                </tr>
 
-                                    <tr>
-                                        <td>32544</td>
-                                        <td>elshan.sharifov</td>
-                                        <td>İRD test proqramı</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>1.95</td>
-                                        <td>neriman.nehmedov</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>
-                                            <p class="m-0 text-center rounded status-private">QAPALI</p>
-                                        </td>
-                                    </tr>
+                                                <tr>
+                                                    <td>32544</td>
+                                                    <td>elshan.sharifov</td>
+                                                    <td>İRD test proqramı</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>1.95</td>
+                                                    <td>neriman.nehmedov</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>
+                                                        <p class="m-0 text-center rounded status-private">QAPALI</p>
+                                                    </td>
+                                                </tr>
 
-                                    <tr>
-                                        <td>32544</td>
-                                        <td>elshan.sharifov</td>
-                                        <td>İRD test proqramı</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>1.95</td>
-                                        <td>neriman.nehmedov</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>
-                                            <p class="m-0 text-center rounded status-private">QAPALI</p>
-                                        </td>
-                                    </tr>
+                                                <tr>
+                                                    <td>32544</td>
+                                                    <td>elshan.sharifov</td>
+                                                    <td>İRD test proqramı</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>1.95</td>
+                                                    <td>neriman.nehmedov</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>
+                                                        <p class="m-0 text-center rounded status-private">QAPALI</p>
+                                                    </td>
+                                                </tr>
 
-                                    <tr>
-                                        <td>32544</td>
-                                        <td>elshan.sharifov</td>
-                                        <td>İRD test proqramı</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>1.95</td>
-                                        <td>neriman.nehmedov</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>
-                                            <p class="m-0 text-center rounded status-private">QAPALI</p>
-                                        </td>
-                                    </tr>
+                                                <tr>
+                                                    <td>32544</td>
+                                                    <td>elshan.sharifov</td>
+                                                    <td>İRD test proqramı</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>1.95</td>
+                                                    <td>neriman.nehmedov</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>
+                                                        <p class="m-0 text-center rounded status-private">QAPALI</p>
+                                                    </td>
+                                                </tr>
 
-                                    <tr>
-                                        <td>32544</td>
-                                        <td>elshan.sharifov</td>
-                                        <td>İRD test proqramı</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>1.95</td>
-                                        <td>neriman.nehmedov</td>
-                                        <td>02.11.2021 14:16</td>
-                                        <td>
-                                            <p class="m-0 text-center rounded status-confirmed">TƏSDİQLƏNDİ</p>
-                                        </td>
-                                    </tr>
+                                                <tr>
+                                                    <td>32544</td>
+                                                    <td>elshan.sharifov</td>
+                                                    <td>İRD test proqramı</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>1.95</td>
+                                                    <td>neriman.nehmedov</td>
+                                                    <td>02.11.2021 14:16</td>
+                                                    <td>
+                                                        <p class="m-0 text-center rounded status-confirmed">TƏSDİQLƏNDİ
+                                                        </p>
+                                                    </td>
+                                                </tr>
 
-                                </tbody>
-                            </table>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
 
                 </div>
 
-                <div class="container mt-auto">
-                    <p class="m-0 footer">Copyright &copy; CIC LLC</p>
+                <div class="container-fluid mt-auto">
+                    <p class="footer">Copyright &copy; CIC LLC</p>
                 </div>
             </div>
 
@@ -346,6 +361,11 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 
+    <!-- Date range picker -->
+    <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
     <!-- Data table js  -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
@@ -353,7 +373,12 @@
 
     <script>
 
-        // Data table CSS 
+        //Date range picker
+        $(document).ready(function () {
+            $('input[name="dates"]').daterangepicker();
+        });
+
+        // Data table 
         $(document).ready(function () {
             // Setup - add a text input to each footer cell
             $('#example thead tr')
@@ -388,7 +413,7 @@
                                 .on('change', function (e) {
                                     // Get the search value
                                     $(this).attr('title', $(this).val());
-                                    var regexr = '({search})'; 
+                                    var regexr = '({search})';
                                     $(this).parents('th').find('select').val();
 
                                     var cursorPosition = this.selectionStart;
@@ -414,7 +439,7 @@
                                 });
                         });
                 },
-                
+
                 "language": {
                     // "sProcessing": "Procesando...",
                     "sLengthMenu": "Göstərilir _MENU_ sorğu",

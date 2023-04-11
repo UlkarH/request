@@ -64,12 +64,18 @@
 /* Table */
 
 .table-custom {
+    width: 100%!important;
     border: 1px solid #CED4DA;
     table-layout: fixed;
 }
 
 .table-custom td {
     height: 3.5rem;
+}
+
+.table-custom tbody tr:hover{
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .table-header {

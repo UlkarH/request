@@ -1,3 +1,7 @@
+body{
+    padding-top: 60px;
+}
+
 /* Navbar */
 
 .navbar-style{
@@ -19,11 +23,23 @@
     color: #9E9E9E;
 }
 
-/* Sidebar*/
+/* Sidebar */
 
 .sidebar-bg{
     background-color: #55539F;
-    min-height: 3vh;
+    min-height: 8.6vh;
+}
+
+.sidebar-style{
+    top: 60px;
+    width: 15rem;
+}
+
+@media (max-width: 992px) {
+    .sidebar-style{
+        background-color: #55539F!important;
+        width: 100%;
+    }
 }
 
 .sidebar-icon-bg{

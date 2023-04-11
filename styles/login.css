@@ -48,6 +48,13 @@ body {
 
 .input-style:hover{
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-style::placeholder{
+    font: normal normal normal 16px/24px Segoe UI;
+    opacity: 0.7;
+    color: #FFFFFF!important;
 }
 
 .form p{
@@ -59,8 +66,14 @@ body {
 }
 
 .btn-style{
+    font: normal normal 600 16px/24px Segoe UI;
     background: transparent linear-gradient(180deg, #383B6C 0%, #1C1E36 100%) 0% 0% no-repeat padding-box;
     opacity: 1;
+}
+
+.btn-style:hover{
+    background: transparent linear-gradient(180deg, #383B6C 0%, #1C1E36 100%) 0% 0% no-repeat padding-box;
+    transition: 0.3s;
 }
 
 .logo-container{
