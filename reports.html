@@ -67,7 +67,7 @@
 
             <div class="col-lg-2 sidebar-bg">
 
-                <nav class="navbar navbar-expand-lg navbar-dark align-items-start w-100 position-sticky">
+                <nav class="navbar navbar-expand-lg navbar-dark align-items-start fixed-top z-2 sidebar-style">
                     <div class="container-fluid">
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#sidebar-content" aria-controls="sidebar-content" aria-expanded="false">
@@ -137,21 +137,9 @@
                                 </div>
                                 <div class="col-auto">
                                     <input type="text" id="date-picker" name="dates"
-                                        class="form-control input-custom shadow-none">
+                                        class="form-control shadow-none input-custom">
                                 </div>
                             </div>
-
-                            <!-- <label for="date-picker" class="pe-2">Tarix aralığı</label>
-                            <input type="date" id="date-picker" class="form-control w-50"> -->
-
-                            <!-- <div class="row">                              
-                                <div class="col-xxl-2 mb-2 mb-xxl-0">
-                                    <label for="date-picker" class="d-inline">Tarix aralığı</label>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="date" id="date-picker" class="form-control">
-                                </div>
-                            </div> -->
                         </div>
                         <div class="col-md-6 d-flex justify-content-md-end mt-3 mt-md-0">
                             <button class="btn px-4 btn-custom" type="button">Excel faylına köçür</button>
@@ -356,18 +344,19 @@
         </div>
     </div>
 
-    <!-- Bootstrap js -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 
-    <!-- Date range picker -->
+    <!-- Jquery -->
     <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    
+    <!-- Date range picker -->
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
     <!-- Data table js  -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/fixedheader/3.2.3/js/dataTables.fixedHeader.min.js"></script>
 

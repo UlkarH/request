@@ -60,49 +60,51 @@
 
             <div class="col-lg-2 sidebar-bg">
 
-                <nav class="navbar navbar-expand-lg navbar-dark align-items-start w-100 position-sticky sidebar-style">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#sidebar-content" aria-controls="sidebar-content" aria-expanded="false">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="sidebar-content">
-                        <ul class="navbar-nav flex-column">
-                            <li class="nav-item py-1">
-                                <a href="requests.html" class="nav-link sidebar-link">
-                                    <div
-                                        class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
-                                        <i class="fa-regular fa-file sidebar-icon"></i>
-                                    </div>
-                                    Sorğular
-                                </a>
-                            </li>
-                            <li class="nav-item py-1">
-                                <a href="reports.html" class="nav-link sidebar-link">
-                                    <div
-                                        class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
-                                        <i class="fa-solid fa-chart-column sidebar-icon"></i>
-                                    </div>
-                                    Hesabat
-                                </a>
-                            </li>
-                            <li class="nav-item py-1">
-                                <a href="profil.html" class="nav-link sidebar-link">
-                                    <div
-                                        class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
-                                        <i class="fa-regular fa-user sidebar-icon"></i>
-                                    </div>
-                                    Profil
-                                </a>
-                            </li>
-                            <li class="nav-item pt-lg-5">
-                                <a href="#" class="nav-link position-relative start-50">
-                                    <div
-                                        class="d-inline-flex align-items-center justify-content-center rounded mx-auto back-icon-style">
-                                        <i class="fa-solid fa-chevron-left"></i>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                <nav class="navbar navbar-expand-lg navbar-dark align-items-start fixed-top z-2 sidebar-style">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#sidebar-content" aria-controls="sidebar-content" aria-expanded="false">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="sidebar-content">
+                            <ul class="navbar-nav flex-column mt-3 mt-lg-2">
+                                <li class="nav-item py-1">
+                                    <a href="requests.html" class="nav-link sidebar-link">
+                                        <div
+                                            class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
+                                            <i class="fa-regular fa-file sidebar-icon"></i>
+                                        </div>
+                                        Sorğular
+                                    </a>
+                                </li>
+                                <li class="nav-item py-1">
+                                    <a href="reports.html" class="nav-link sidebar-link">
+                                        <div
+                                            class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
+                                            <i class="fa-solid fa-chart-column sidebar-icon"></i>
+                                        </div>
+                                        Hesabat
+                                    </a>
+                                </li>
+                                <li class="nav-item py-1">
+                                    <a href="profil.html" class="nav-link sidebar-link">
+                                        <div
+                                            class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
+                                            <i class="fa-regular fa-user sidebar-icon"></i>
+                                        </div>
+                                        Profil
+                                    </a>
+                                </li>
+                                <li class="nav-item pt-lg-5">
+                                    <a href="#" class="nav-link position-relative start-50">
+                                        <div
+                                            class="d-inline-flex align-items-center justify-content-center rounded mx-auto back-icon-style">
+                                            <i class="fa-solid fa-chevron-left"></i>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
 
@@ -110,7 +112,7 @@
 
             <!-- Content -->
 
-            <div class="col-lg-10 content-bg d-flex flex-column align-items-end">
+            <div class="col-lg-10 content-bg d-flex flex-column align-items-end z-1">
                 <div class="container-fluid mb-4 mb-xxl-0">
 
                     <!-- Header -->
@@ -127,7 +129,7 @@
                     <div class="row mt-3 nav-tabs-container">
                         <div class="col-12">
 
-                            <ul class="nav nav-tabs flex-column flex-sm-row nav-tabs-style" id="myTab" role="tablist">
+                            <ul class="nav nav-tabs d-none d-sm-flex nav-tabs-style" id="myTab" role="tablist">
                                 <li class="nav-item" role="presentation">
                                     <button type="button" class="nav-link active px-4 tabs-btn-style" id="tab-request"
                                         data-bs-toggle="tab" data-bs-target="#request" role="tab"
@@ -151,404 +153,440 @@
                                 </li>
                             </ul>
 
-                            <div class="tab-content mt-4">
+                            <div class="tab-content accordion mt-4" id="myAccordion">
 
-                                <div class="tab-pane fade show active" id="request" role="tab-panel"
-                                    aria-labelledby="tab-request">
+                                <div class="tab-pane fade show active accordion-item border-0" id="request" role="tab-panel"
+                                    aria-labelledby="tab-request" tab-index="0">
 
-                                    <div class="container-fluid">
-                                        <div class="row">
-                                            <div class="col-12 d-flex">
-                                                <img src="images/user-icon.png" alt="profil-photo"
-                                                    class="rounded border border-3 border-white me-3" width="42px"
-                                                    height="42px">
-                                                <div class="card py-2 px-1 w-100">
-                                                    <div class="card-body">
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <h6 class="card-title card-title-custom">Oqtay Ibrahimov
-                                                                    <small
-                                                                        class="card-subtitle card-subtitle-custom">Şöbə
-                                                                        rəisi</small></h6>
-                                                            </div>
-                                                            <div class="col-md-6 text-md-end">
-                                                                <p class="card-text-small">
-                                                                    <i class="fa-regular fa-clock"></i>
-                                                                    04.11.2021 07:49
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <h5 class="request-title">Proqram təminatı</h5>
-                                                                <p class="card-text-custom">
-                                                                    Kütləvi əvəzetmə zamanı çıxarılmış itron tipli
-                                                                    sayğaclarda qalan istifadə olunmamış məbləğin
-                                                                    qaytarılmasının sürətləndirilməsi üçün Gasreport
-                                                                    proqramında Saldo Z bölməsində bərkidilmiş şəkildəki
-                                                                    kimi əlavə pəncərənin açılması arzu olunandır. Həmin
-                                                                    bölmədə Saldo Z reportunda olan sayğacların illər
-                                                                    üzrə ödənilmiş məbləğlərin və həmin məbləğin
-                                                                    qarşısında əldə olunmuş qaz sərfinin cəmilərini
-                                                                    göstərir. Buda əvəzlənmə aktında göstərilən sayğacın
-                                                                    göstəricisinə görə hesabatın aparılmasının
-                                                                    sürətləndirilməsinə gətirəcək. Xahiş edirəm köməklik
-                                                                    göstərəsiniz.
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <a href="#"
-                                                                    class="text-decoration-none attachment">Qoşma</a>
-                                                            </div>
-                                                            <div class="col-md-6 text-md-end card-text-small">
-                                                                <span>
-                                                                    App New Requirement <div class="vr"></div> Medium
-                                                                </span>
+                                    <h2 class="accordion-header d-sm-none" id="headingOne">
+                                        <button class="accordion-button shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Sorğu</button>
+                                    </h2>
+
+                                    <div id="collapseOne" class="accordion-collapse collapse show d-sm-block" aria-labelledby="headingOne" data-bs-parent="#myAccordion">
+                                        <div class="accordion-body px-0 py-sm-0">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-12 d-flex">
+                                                        <img src="images/user-icon.png" alt="profil-photo"
+                                                            class="rounded border border-3 border-white me-3" width="42px"
+                                                            height="42px">
+                                                        <div class="card py-2 px-1 w-100">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <h6 class="card-title card-title-custom">Oqtay Ibrahimov
+                                                                            <small
+                                                                                class="card-subtitle card-subtitle-custom">Şöbə
+                                                                                rəisi</small></h6>
+                                                                    </div>
+                                                                    <div class="col-md-6 text-md-end">
+                                                                        <p class="card-text-small">
+                                                                            <i class="fa-regular fa-clock"></i>
+                                                                            04.11.2021 07:49
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <h5 class="request-title">Proqram təminatı</h5>
+                                                                        <p class="card-text-custom">
+                                                                            Kütləvi əvəzetmə zamanı çıxarılmış itron tipli
+                                                                            sayğaclarda qalan istifadə olunmamış məbləğin
+                                                                            qaytarılmasının sürətləndirilməsi üçün Gasreport
+                                                                            proqramında Saldo Z bölməsində bərkidilmiş şəkildəki
+                                                                            kimi əlavə pəncərənin açılması arzu olunandır. Həmin
+                                                                            bölmədə Saldo Z reportunda olan sayğacların illər
+                                                                            üzrə ödənilmiş məbləğlərin və həmin məbləğin
+                                                                            qarşısında əldə olunmuş qaz sərfinin cəmilərini
+                                                                            göstərir. Buda əvəzlənmə aktında göstərilən sayğacın
+                                                                            göstəricisinə görə hesabatın aparılmasının
+                                                                            sürətləndirilməsinə gətirəcək. Xahiş edirəm köməklik
+                                                                            göstərəsiniz.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <a href="#"
+                                                                            class="text-decoration-none attachment">Qoşma</a>
+                                                                    </div>
+                                                                    <div class="col-md-6 text-md-end card-text-small">
+                                                                        <span>
+                                                                            App New Requirement <div class="vr"></div> Medium
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-12 d-flex ps-4">
-                                                <img src="images/user-icon.png" alt="profil-photo"
-                                                    class="rounded border border-3 border-white ms-5 me-3" width="42px"
-                                                    height="42px">
-                                                <div class="card py-2 px-1 w-100">
-                                                    <div class="card-body">
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <h6 class="card-title card-title-custom">Shole Zeynalli
-                                                                    <small
-                                                                        class="card-subtitle card-subtitle-custom">Proqram
-                                                                        təminatı üzrə məsləhətçi</small></h6>
-                                                            </div>
-                                                            <div class="col-md-6 text-md-end">
-                                                                <p class="m-0 card-text-small">
-                                                                    <i class="fa-regular fa-clock print-icon"></i>
-                                                                    04.11.2021 11:23
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <p class="m-0 card-text-custom">
-                                                                    Məsələyə baxılacaq.
-                                                                </p>
+                                                <div class="row mt-3">
+                                                    <div class="col-12 d-flex ps-4">
+                                                        <img src="images/user-icon.png" alt="profil-photo"
+                                                            class="rounded border border-3 border-white ms-5 me-3" width="42px"
+                                                            height="42px">
+                                                        <div class="card py-2 px-1 w-100">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <h6 class="card-title card-title-custom">Shole Zeynalli
+                                                                            <small
+                                                                                class="card-subtitle card-subtitle-custom">Proqram
+                                                                                təminatı üzrə məsləhətçi</small></h6>
+                                                                    </div>
+                                                                    <div class="col-md-6 text-md-end">
+                                                                        <p class="m-0 card-text-small">
+                                                                            <i class="fa-regular fa-clock print-icon"></i>
+                                                                            04.11.2021 11:23
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <p class="m-0 card-text-custom">
+                                                                            Məsələyə baxılacaq.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-12 d-flex justify-content-between">
-                                                <button class="btn border-0 shadow-none px-0 btn-print"
-                                                    onclick="window.print()">
-                                                    <div
-                                                        class="d-inline-flex align-items-center justify-content-center rounded print-icon-container">
-                                                        <i class="fa-solid fa-print opacity-50 print-icon"></i>
+                                                <div class="row mt-3">
+                                                    <div class="col-12 d-flex justify-content-between">
+                                                        <button class="btn border-0 shadow-none px-0 btn-print"
+                                                            onclick="window.print()">
+                                                            <div
+                                                                class="d-inline-flex align-items-center justify-content-center rounded print-icon-container">
+                                                                <i class="fa-solid fa-print opacity-50 print-icon"></i>
+                                                            </div>
+                                                            Çap et
+                                                        </button>
+                                                        <div class="div">
+                                                            <button class="btn px-sm-4 me-1 me-sm-2 request-cancel-btn"
+                                                                type="button">İmtina et</button>
+                                                            <button class="btn px-sm-4 btn-custom-style" type="button">Lok
+                                                                et</button>
+                                                        </div>
                                                     </div>
-                                                    Çap et
-                                                </button>
-                                                <div class="div">
-                                                    <button class="btn px-sm-4 me-1 me-sm-2 request-cancel-btn"
-                                                        type="button">İmtina et</button>
-                                                    <button class="btn px-sm-4 btn-custom-style" type="button">Lok
-                                                        et</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
 
-                                <div class="tab-pane fade" id="comment" role="tab-panel" aria-labelledby="tab-comment">
+                                <div class="tab-pane fade accordion-item border-0" id="comment" role="tab-panel" aria-labelledby="tab-comment" tab-index="0">
 
-                                    <div class="container-fluid">
-                                        <div class="row">
-                                            <div class="col-12 d-flex">
-                                                <img src="images/user-icon.png" alt="profil-photo"
-                                                    class="border border-3 border-white rounded me-3" width="38px"
-                                                    height="38px">
-                                                <div class="card w-100">
-                                                    <div class="card-body">
-                                                        <div class="row">
-                                                            <div class="col-md-6 mb-0 pb-0">
-                                                                <h6 class="card-title card-title-custom">Shole Zeynalli
-                                                                    <small
-                                                                        class="card-subtitle card-subtitle-custom">Proqram
-                                                                        təminatı üzrə məsləhətçi</small></h6>
-                                                            </div>
-                                                            <div class="col-md-6 text-md-end">
-                                                                <p class="card-text-small">
-                                                                    <i class="fa-regular fa-clock print-icon"></i>
-                                                                    04.11.2021 11:23
-                                                                </p>
+                                    <h2 class="accordion-header d-sm-none" id="headingTwo">
+                                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Şərh 
+                                        </button>
+                                    </h2>
+
+                                    <div id="collapseTwo" class="accordion-collapse collapse d-sm-block" aria-labelledby="headingTwo" data-bs-parent="#myAccordion" >
+                                        <div class="accordion-body px-0 py-sm-0">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-12 d-flex">
+                                                        <img src="images/user-icon.png" alt="profil-photo"
+                                                            class="border border-3 border-white rounded me-3" width="38px"
+                                                            height="38px">
+                                                        <div class="card w-100">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-md-6 mb-0 pb-0">
+                                                                        <h6 class="card-title card-title-custom">Shole Zeynalli
+                                                                            <small
+                                                                                class="card-subtitle card-subtitle-custom">Proqram
+                                                                                təminatı üzrə məsləhətçi</small></h6>
+                                                                    </div>
+                                                                    <div class="col-md-6 text-md-end">
+                                                                        <p class="card-text-small">
+                                                                            <i class="fa-regular fa-clock print-icon"></i>
+                                                                            04.11.2021 11:23
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <p class="m-0">
+                                                                            Məsələyə baxılacaq.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <p class="m-0">
-                                                                    Məsələyə baxılacaq.
-                                                                </p>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-4">
+                                                    <div class="col-12">
+                                                        <form action="">
+                                                            <div class="form-group">
+                                                                <label for="comment-textbox" class="form-label">Şərh</label>
+                                                                <textarea class="form-control shadow-none form-textbox"
+                                                                    id="comment-textbox" rows="5"></textarea>
+                                                            </div>
+                                                            <div class="form-group mt-3">
+                                                                <label for="file-choose" class="form-label">Qoşma</label> <br>
+                                                                <input type="file" class="form-control-file file-input">
+                                                            </div>
+        
+                                                            <button class="btn border-0 shadow-none mt-3 px-4 btn-custom-style"
+                                                                type="submit">Göndər</button>
+        
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade accordion-item border-0" id="history" role="tab-panel" aria-labelledby="tab-history" tab-index="0">
+
+                                    <h2 class="accordion-header d-sm-none" id="headingThree">
+                                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Tarixçə 
+                                        </button>
+                                    </h2>
+
+                                    <div id="collapseThree" class="accordion-collapse collapse d-sm-block" aria-labelledby="headingThree" data-bs-parent="#myAccordion">
+                                        <div class="accordion-body px-0 py-sm-0">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="card w-100">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div
+                                                                        class="col-md-4 d-flex justify-content-end align-items-center">
+                                                                        <img src="images/user-icon.png" alt="profil-photo"
+                                                                            width="38px" height="38px" class="rounded me-3">
+                                                                        <div>
+                                                                            <h6 class="card-title-custom">Oqtay İbrahimov</h6>
+                                                                            <p class="m-0 card-subtitle-custom">Şöbə rəisi</p>
+                                                                        </div>
+                                                                        <div class="vr ms-auto"></div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-4 ps-md-5 mt-2 mt-md-0 d-flex align-items-center">
+                                                                        <p class="m-0 card-text-custom">Yeni sorğu yaratdı</p>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-4 mt-2 mt-md-0 d-flex align-items-center justify-content-md-end">
+                                                                        <p class="m-0 card-text-small"><i
+                                                                                class="fa-regular fa-clock print-icon"></i>
+                                                                            04.11.2021 11:23</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card mt-3 w-100">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div
+                                                                        class="col-md-4 d-flex justify-content-end align-items-center">
+                                                                        <img src="images/user-icon.png" alt="profil-photo"
+                                                                            width="38px" height="38px" class="rounded me-3">
+                                                                        <div>
+                                                                            <h6 class="card-title-custom">Shole Zeynalli</h6>
+                                                                            <p class="m-0 card-subtitle-custom">Proqram təminatı
+                                                                                üzrə
+                                                                                məsləhətçi</p>
+                                                                        </div>
+                                                                        <div class="vr ms-auto"></div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-4 ps-md-5 mt-2 mt-md-0 d-flex align-items-center">
+                                                                        <p class="m-0 card-text-custom">Sorğunu öz üzərinə
+                                                                            götürdü</p>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-4 mt-2 mt-md-0 d-flex align-items-center justify-content-md-end">
+                                                                        <p class="m-0 card-text-small"><i
+                                                                                class="fa-regular fa-clock print-icon"></i>
+                                                                            04.11.2021 13:44</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card mt-3 w-100">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div
+                                                                        class="col-md-4 d-flex justify-content-end align-items-center">
+                                                                        <img src="images/user-icon.png" alt="profil-photo"
+                                                                            width="38px" height="38px" class="rounded me-3">
+                                                                        <div>
+                                                                            <h6 class="card-title-custom">Shole Zeynalli</h6>
+                                                                            <p class="m-0 card-subtitle-custom">Proqram təminatı
+                                                                                üzrə
+                                                                                məsləhətçi</p>
+                                                                        </div>
+                                                                        <div class="vr ms-auto"></div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-4 ps-md-5 mt-2 mt-md-0 d-flex align-items-center">
+                                                                        <p class="m-0 card-text-custom">Sorğunu qapatdı</p>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-md-4 mt-2 mt-md-0 d-flex align-items-center justify-content-md-end">
+                                                                        <p class="m-0 card-text-small"><i
+                                                                                class="fa-regular fa-clock print-icon"></i>
+                                                                            05.11.2021 10:36</p>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row mt-4">
-                                            <div class="col-12">
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade accordion-item border-0 mb-5" id="requestInfo" role="tab-panel"
+                                    aria-labelledby="tab-requestInfo" tab-index="0">
+
+                                    <h2 class="accordion-header d-sm-none" id="headingFour">
+                                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            Sorğu 
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse d-sm-block" aria-labelledby="headingFour" data-bs-parent="#myAccordion">
+                                        <div class="accordion-body px-0 py-sm-0">
+                                            <div class="container-fluid">
                                                 <form action="">
-                                                    <div class="form-group">
-                                                        <label for="comment-textbox" class="form-label">Şərh</label>
-                                                        <textarea class="form-control shadow-none form-textbox"
-                                                            id="comment-textbox" rows="5"></textarea>
+        
+                                                    <div class="row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="priority" class="form-label">Prioritet</label>
+                                                            <select name="" id="priority"
+                                                                class="form-select shadow-none form-select-custom">
+                                                                <option value="" selected>Low</option>
+                                                                <option value="">Medium</option>
+                                                                <option value="">High</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="request-type" class="form-label">Sorğunun tipi</label>
+                                                            <select name="" id="request-type"
+                                                                class="form-select shadow-none form-select-custom">
+                                                                <option value="" selected>APP Change</option>
+                                                                <option value="">APP Issue</option>
+                                                                <option value="">APP New Requirement</option>
+                                                                <option value="">Change the Report</option>
+                                                                <option value="">Create Custom Report</option>
+                                                                <option value="">Create New Report</option>
+                                                                <option value="">Incident</option>
+                                                                <option value="">Master Data Change</option>
+                                                                <option value="">Service Request</option>
+                                                            </select>
+                                                        </div>
                                                     </div>
+        
                                                     <div class="form-group mt-3">
-                                                        <label for="file-choose" class="form-label">Qoşma</label> <br>
-                                                        <input type="file" class="form-control-file file-input">
+                                                        <label for="result" class="form-label">Nəticə</label>
+                                                        <textarea name="" id="result"
+                                                            class="form-control shadow-none form-textbox" rows="3"></textarea>
                                                     </div>
-
-                                                    <button class="btn border-0 shadow-none mt-3 px-4 btn-custom-style"
-                                                        type="submit">Göndər</button>
-
+        
+                                                    <div class="form-group mt-3">
+                                                        <label for="solution" class="form-label">Həll yolu</label>
+                                                        <textarea name="" id="solution"
+                                                            class="form-control shadow-none form-textbox" rows="3"></textarea>
+                                                    </div>
+        
+                                                    <div class="row mt-3">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="execution" class="form-label">İcra müddəti</label>
+                                                            <input type="text" id="execution"
+                                                                class="form-control shadow-none form-input">
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="planned-execution" class="form-label">Planlaşdırılmış
+                                                                icra müddəti</label>
+                                                            <input type="text" id="planned-execution"
+                                                                class="form-control shadow-none form-input">
+                                                        </div>
+                                                    </div>
+        
+                                                    <label for="" class="form-label d-block mt-3">Tip</label>
+                                                    <div class="form-check form-check-inline mt-2">
+                                                        <input type="radio" class="form-check-input shadow-none radio-custom" name="type"
+                                                            id="meintenance" checked>
+                                                        <label for="meintenance" class="form-check-label">Application
+                                                            Maintenance</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input type="radio" class="form-check-input shadow-none radio-custom" name="type"
+                                                            id="development">
+                                                        <label for="development">Application Development</label>
+                                                    </div>
+        
+                                                    <div class="row mt-3">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="request-sender" class="form-label">Sorğunu
+                                                                göndərən</label>
+                                                            <input type="text" id="request-sender"
+                                                                class="form-control shadow-none form-input">
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="request-number" class="form-label">Solman Request
+                                                                Number</label>
+                                                            <input type="text" id="request-number shadow-none"
+                                                                class="form-control form-input">
+                                                        </div>
+                                                    </div>
+        
+                                                    <label for="" class="form-label d-block mt-3">Əlaqə vasitəsi</label>
+                                                    <div class="form-check form-check-inline mt-2">
+                                                        <input type="radio" class="form-check-input shadow-none radio-custom" name="contact"
+                                                            id="email" checked>
+                                                        <label for="email">Email</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input type="radio" class="form-check-input shadow-none radio-custom" name="contact"
+                                                            id="phone">
+                                                        <label for="phone">Phone</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input type="radio" class="form-check-input shadow-none radio-custom" name="contact"
+                                                            id="solman">
+                                                        <label for="solman">SOLMAN</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input type="radio" class="form-check-input shadow-none radio-custom" name="contact"
+                                                            id="request-radio">
+                                                        <label for="request-radio">REQUEST</label>
+                                                    </div>
+        
+                                                    <div class="form-check form-switch p-0 mt-3">
+                                                        <label for="routine-switch"
+                                                            class="form-check-label d-block form-label radio-custom">Routine</label>
+                                                        <input type="checkbox" role="switch"
+                                                            class="form-check-input shadow-none border-0 m-0 mt-2 switch-custom" id="routine-switch">
+                                                    </div>
+        
+                                                    <div class="form-group mt-5">
+                                                        <label for="code" class="form-label">Code</label>
+                                                        <textarea name="" id="code" rows="6"
+                                                            class="form-control shadow-none form-textbox"></textarea>
+                                                    </div>
+        
+                                                    <div class="form-group mt-3">
+                                                        <label for="root-cause" class="form-label">Root Cause</label>
+                                                        <textarea name="" id="root-cause" rows="3"
+                                                            class="form-control shadow-none form-textbox"></textarea>
+                                                    </div>
+        
+                                                    <button class="btn px-4 mt-3 btn-custom-style">Göndər</button>
+        
                                                 </form>
                                             </div>
                                         </div>
                                     </div>
-
-                                </div>
-
-                                <div class="tab-pane fade" id="history" role="tab-panel" aria-labelledby="tab-history">
-
-                                    <div class="container-fluid">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="card w-100">
-                                                    <div class="card-body">
-                                                        <div class="row">
-                                                            <div
-                                                                class="col-md-4 d-flex justify-content-end align-items-center">
-                                                                <img src="images/user-icon.png" alt="profil-photo"
-                                                                    width="38px" height="38px" class="rounded me-3">
-                                                                <div>
-                                                                    <h6 class="card-title-custom">Oqtay İbrahimov</h6>
-                                                                    <p class="m-0 card-subtitle-custom">Şöbə rəisi</p>
-                                                                </div>
-                                                                <div class="vr ms-auto"></div>
-                                                            </div>
-                                                            <div
-                                                                class="col-md-4 ps-md-5 mt-2 mt-md-0 d-flex align-items-center">
-                                                                <p class="m-0 card-text-custom">Yeni sorğu yaratdı</p>
-                                                            </div>
-                                                            <div
-                                                                class="col-md-4 mt-2 mt-md-0 d-flex align-items-center justify-content-md-end">
-                                                                <p class="m-0 card-text-small"><i
-                                                                        class="fa-regular fa-clock print-icon"></i>
-                                                                    04.11.2021 11:23</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card mt-3 w-100">
-                                                    <div class="card-body">
-                                                        <div class="row">
-                                                            <div
-                                                                class="col-md-4 d-flex justify-content-end align-items-center">
-                                                                <img src="images/user-icon.png" alt="profil-photo"
-                                                                    width="38px" height="38px" class="rounded me-3">
-                                                                <div>
-                                                                    <h6 class="card-title-custom">Shole Zeynalli</h6>
-                                                                    <p class="m-0 card-subtitle-custom">Proqram təminatı
-                                                                        üzrə
-                                                                        məsləhətçi</p>
-                                                                </div>
-                                                                <div class="vr ms-auto"></div>
-                                                            </div>
-                                                            <div
-                                                                class="col-md-4 ps-md-5 mt-2 mt-md-0 d-flex align-items-center">
-                                                                <p class="m-0 card-text-custom">Sorğunu öz üzərinə
-                                                                    götürdü</p>
-                                                            </div>
-                                                            <div
-                                                                class="col-md-4 mt-2 mt-md-0 d-flex align-items-center justify-content-md-end">
-                                                                <p class="m-0 card-text-small"><i
-                                                                        class="fa-regular fa-clock print-icon"></i>
-                                                                    04.11.2021 13:44</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card mt-3 w-100">
-                                                    <div class="card-body">
-                                                        <div class="row">
-                                                            <div
-                                                                class="col-md-4 d-flex justify-content-end align-items-center">
-                                                                <img src="images/user-icon.png" alt="profil-photo"
-                                                                    width="38px" height="38px" class="rounded me-3">
-                                                                <div>
-                                                                    <h6 class="card-title-custom">Shole Zeynalli</h6>
-                                                                    <p class="m-0 card-subtitle-custom">Proqram təminatı
-                                                                        üzrə
-                                                                        məsləhətçi</p>
-                                                                </div>
-                                                                <div class="vr ms-auto"></div>
-                                                            </div>
-                                                            <div
-                                                                class="col-md-4 ps-md-5 mt-2 mt-md-0 d-flex align-items-center">
-                                                                <p class="m-0 card-text-custom">Sorğunu qapatdı</p>
-                                                            </div>
-                                                            <div
-                                                                class="col-md-4 mt-2 mt-md-0 d-flex align-items-center justify-content-md-end">
-                                                                <p class="m-0 card-text-small"><i
-                                                                        class="fa-regular fa-clock print-icon"></i>
-                                                                    05.11.2021 10:36</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="tab-pane fade mb-5" id="requestInfo" role="tab-panel"
-                                    aria-labelledby="tab-requestInfo">
-                                    <div class="container-fluid">
-                                        <form action="">
-
-                                            <div class="row">
-                                                <div class="form-group col-md-6">
-                                                    <label for="priority" class="form-label">Prioritet</label>
-                                                    <select name="" id="priority"
-                                                        class="form-select shadow-none form-select-custom">
-                                                        <option value="" selected>Low</option>
-                                                        <option value="">Medium</option>
-                                                        <option value="">High</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group col-md-6">
-                                                    <label for="request-type" class="form-label">Sorğunun tipi</label>
-                                                    <select name="" id="request-type"
-                                                        class="form-select shadow-none form-select-custom">
-                                                        <option value="" selected>APP Change</option>
-                                                        <option value="">APP Issue</option>
-                                                        <option value="">APP New Requirement</option>
-                                                        <option value="">Change the Report</option>
-                                                        <option value="">Create Custom Report</option>
-                                                        <option value="">Create New Report</option>
-                                                        <option value="">Incident</option>
-                                                        <option value="">Master Data Change</option>
-                                                        <option value="">Service Request</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group mt-3">
-                                                <label for="result" class="form-label">Nəticə</label>
-                                                <textarea name="" id="result"
-                                                    class="form-control shadow-none form-textbox" rows="3"></textarea>
-                                            </div>
-
-                                            <div class="form-group mt-3">
-                                                <label for="solution" class="form-label">Həll yolu</label>
-                                                <textarea name="" id="solution"
-                                                    class="form-control shadow-none form-textbox" rows="3"></textarea>
-                                            </div>
-
-                                            <div class="row mt-3">
-                                                <div class="form-group col-md-6">
-                                                    <label for="execution" class="form-label">İcra müddəti</label>
-                                                    <input type="text" id="execution"
-                                                        class="form-control shadow-none form-input">
-                                                </div>
-                                                <div class="form-group col-md-6">
-                                                    <label for="planned-execution" class="form-label">Planlaşdırılmış
-                                                        icra müddəti</label>
-                                                    <input type="text" id="planned-execution"
-                                                        class="form-control shadow-none form-input">
-                                                </div>
-                                            </div>
-
-                                            <label for="" class="form-label d-block mt-3">Tip</label>
-                                            <div class="form-check form-check-inline mt-2">
-                                                <input type="radio" class="form-check-input shadow-none radio-custom" name="type"
-                                                    id="meintenance" checked>
-                                                <label for="meintenance" class="form-check-label">Application
-                                                    Maintenance</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="radio" class="form-check-input shadow-none radio-custom" name="type"
-                                                    id="development">
-                                                <label for="development">Application Development</label>
-                                            </div>
-
-                                            <div class="row mt-3">
-                                                <div class="form-group col-md-6">
-                                                    <label for="request-sender" class="form-label">Sorğunu
-                                                        göndərən</label>
-                                                    <input type="text" id="request-sender"
-                                                        class="form-control shadow-none form-input">
-                                                </div>
-                                                <div class="form-group col-md-6">
-                                                    <label for="request-number" class="form-label">Solman Request
-                                                        Number</label>
-                                                    <input type="text" id="request-number shadow-none"
-                                                        class="form-control form-input">
-                                                </div>
-                                            </div>
-
-                                            <label for="" class="form-label d-block mt-3">Əlaqə vasitəsi</label>
-                                            <div class="form-check form-check-inline mt-2">
-                                                <input type="radio" class="form-check-input shadow-none radio-custom" name="contact"
-                                                    id="email" checked>
-                                                <label for="email">Email</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="radio" class="form-check-input shadow-none radio-custom" name="contact"
-                                                    id="phone">
-                                                <label for="phone">Phone</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="radio" class="form-check-input shadow-none radio-custom" name="contact"
-                                                    id="solman">
-                                                <label for="solman">SOLMAN</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="radio" class="form-check-input shadow-none radio-custom" name="contact"
-                                                    id="request-radio">
-                                                <label for="request-radio">REQUEST</label>
-                                            </div>
-
-                                            <div class="form-check form-switch p-0 mt-3">
-                                                <label for="routine-switch"
-                                                    class="form-check-label d-block form-label radio-custom">Routine</label>
-                                                <input type="checkbox" role="switch"
-                                                    class="form-check-input shadow-none border-0 m-0 mt-2 switch-custom" id="routine-switch">
-                                            </div>
-
-                                            <div class="form-group mt-5">
-                                                <label for="code" class="form-label">Code</label>
-                                                <textarea name="" id="code" rows="6"
-                                                    class="form-control shadow-none form-textbox"></textarea>
-                                            </div>
-
-                                            <div class="form-group mt-3">
-                                                <label for="root-cause" class="form-label">Root Cause</label>
-                                                <textarea name="" id="root-cause" rows="3"
-                                                    class="form-control shadow-none form-textbox"></textarea>
-                                            </div>
-
-                                            <button class="btn px-4 mt-3 btn-custom-style">Göndər</button>
-
-                                        </form>
-                                    </div>
+                                    
                                 </div>
 
                             </div>
@@ -565,6 +603,7 @@
         </div>
     </div>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>

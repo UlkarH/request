@@ -47,6 +47,29 @@
     color: #6045E2;
 }
 
+/* Accordion */
+
+@media (max-width: 576px) {
+    .nav-tabs-container .tab-content .tab-pane {
+        display: block;
+        opacity: 1;
+    }
+}
+
+#myAccordion .accordion-item {
+    background-color: #F0F1F5;
+}
+
+#myAccordion .accordion-button{
+    color: #55539F;
+    border-bottom: 1px solid #55539F;
+}
+
+#myAccordion .accordion-button:not(.collapsed){
+    color: #55539F;
+    background-color: #DDDCEB;
+}
+
 /* Card-style */
 
 .card-title-custom {
@@ -112,11 +135,11 @@
 
 .switch-custom {
     background-color: #C9C9D5;
-    width: 39px!important;
-    height: 24px!important;
+    width: 39px !important;
+    height: 24px !important;
 }
 
-.switch-custom:checked{
+.switch-custom:checked {
     background-color: #13AA58;
 }
 
