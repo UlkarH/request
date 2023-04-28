@@ -16,9 +16,6 @@
     <link rel="stylesheet" href="styles/requests.css">
 
     <!-- Table CSS -->
-    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.2.3/css/fixedHeader.dataTables.min.css">  -->
-
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
 
     <!-- Font-awesome -->
@@ -77,10 +74,10 @@
                         <div class="collapse navbar-collapse" id="sidebar-content">
                             <ul class="navbar-nav flex-column mt-3 mt-lg-2">
                                 <li class="nav-item py-1">
-                                    <a href="requests.html" class="nav-link sidebar-link">
+                                    <a href="requests.html" class="nav-link sidebar-link sidebar-link-active">
                                         <div
                                             class="d-inline-flex align-items-center justify-content-center rounded sidebar-icon-bg me-2">
-                                            <i class="fa-regular fa-file sidebar-icon"></i>
+                                            <i class="fa-regular fa-file sidebar-icon sidebar-icon-active"></i>
                                         </div>
                                         Sorğular
                                     </a>
@@ -1681,10 +1678,7 @@
 
     <!-- Data table js  -->
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/fixedcolumns/4.2.2/js/dataTables.fixedColumns.min.js"></script>
 
-    <!-- <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script> -->
-    <!-- <script src="https://cdn.datatables.net/fixedheader/3.2.3/js/dataTables.fixedHeader.min.js"></script> -->
 
 
     <script>
@@ -1700,7 +1694,6 @@
 
                 $('#example' + i).DataTable({
                     orderCellsTop: true,
-                    // fixedHeader: true,
                     scrollX: true,
                     sScrollXInner: "100%",
                     scrollCollapse: true,
@@ -1780,12 +1773,9 @@
                         // }
                     }
                 });
+                
                 $('#example' + i).on('click', 'tbody tr', function () {
                     window.open('request-detail.html', '_self');
-                });
-                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-                    $($.fn.dataTable.tables(true)).DataTable()
-                        .scroller.measure();
                 });
             }
         });
